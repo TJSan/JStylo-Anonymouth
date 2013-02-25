@@ -1,11 +1,14 @@
 package edu.drexel.psal.anonymouth.gooie;
 
+import edu.drexel.psal.anonymouth.utils.ConsolidationStation;
 import edu.drexel.psal.jstylo.generics.CumulativeFeatureDriver;
 import edu.drexel.psal.jstylo.generics.Logger;
 import edu.drexel.psal.jstylo.generics.ProblemSet;
 import edu.drexel.psal.jstylo.generics.WekaInstancesBuilder;
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.List;
@@ -72,7 +75,7 @@ public class EditorInnerTabDriver {
 						editorBox = new JTextPane();
 						editBox.setViewportView(editorBox);
 						editorBox.setText("Your document will be here.");
-						editorBox.setEditable(false);
+						editorBox.setEditable(true);
 					}
 				}
 				{
@@ -124,6 +127,7 @@ public class EditorInnerTabDriver {
 				tabMade = true;
 				return this;
 			}
+			
 
 }
 

@@ -1,6 +1,14 @@
 package edu.drexel.psal.anonymouth.gooie;
 
+import edu.drexel.psal.anonymouth.utils.POS;
 import edu.drexel.psal.jstylo.generics.Logger;
+/*
+import com.wintertree.wthes.CompressedThesaurus;
+import com.wintertree.wthes.LicenseKey;
+import com.wintertree.wthes.TextThesaurus;
+import com.wintertree.wthes.Thesaurus;
+import com.wintertree.wthes.ThesaurusSession;
+*/
 import edu.smu.tspell.wordnet.Synset;
 import edu.smu.tspell.wordnet.WordNetDatabase;
 
@@ -15,12 +23,20 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 import javax.swing.JOptionPane;
 
 import com.jgaap.JGAAPConstants;
-
+/*
+import com.wintertree.wthes.CompressedThesaurus;
+import com.wintertree.wthes.LicenseKey;
+import com.wintertree.wthes.TextThesaurus;
+import com.wintertree.wthes.Thesaurus;
+import com.wintertree.wthes.ThesaurusSession;
+*/
 /**
  * Provides the support needed for the DictionaryConsole to function - hense, its name. 
  * @author Andrew W.E. McDonald
@@ -36,10 +52,12 @@ public class DictionaryBinding {
 	protected static boolean isFirstGramSearch = true;
 	protected static ArrayList<String> allWords = new ArrayList<String>();
 	
-	
+	public static void init(){
+		System.setProperty("wordnet.database.dir","./src"+JGAAPConstants.JGAAP_RESOURCE_PACKAGE+"wordnet");
+	}
 	public static void initDictListeners(final DictionaryConsole dc){
 		
-		System.setProperty("wordnet.database.dir","./src"+JGAAPConstants.JGAAP_RESOURCE_PACKAGE+"wordnet");
+		init();
 		
 		
 		dc.notFound.addActionListener(new ActionListener(){
@@ -236,5 +254,46 @@ public class DictionaryBinding {
 		}
 		return true;
 	}
+	
+	public static String[] getSynonyms(String wordToFind, String pos){
+		wordSynSetResult = "";
+		wordToFind=wordToFind.trim().toLowerCase();
+		WordNetDatabase wnd = WordNetDatabase.getFileInstance();
+		Synset[] testSet = wnd.getSynsets(wordToFind);
+		int synNumber =1;
+		int i;
+		String [] wfs;
+		for(i = 0; i< testSet.length; i++){
+			wfs = testSet[i].getWordForms();
+			
+			//String [] use = testSet[i].getUsageExamples();
+			int j;
+			for(j=0; j< wfs.length;j++){
+				try{
+					//wordSynSetResult = wordSynSetResult+"Synonym number ("+(j+1)+"): "+wfs[j]+"  => usage (if specified): "+use[j]+"\n";
+					if(!wordToFind.contains(wfs[j].toLowerCase())){
+						wordSynSetResult = wordSynSetResult+"("+synNumber+"): "+wfs[j]+"\n";
+						//Logger.logln("Results for: "+wordToFind+"\n"+wordSynSetResult);
+						synNumber++;
+					}
+				}
+				catch(ArrayIndexOutOfBoundsException e){
+					e.printStackTrace();
+					Logger.logln("Caught an exception...");					
+				}
+			}
+			//wordSynSetResult = wordSynSetResult+"\n";
+			return wfs;
+		}
+		return null;//BIG PROBLEM
+		
+	}
 
+	 public static void main(String args[]) {
+		 String [] temp=getSynonyms("walk", "verb");
+		 for(String s:temp){
+			 System.out.println(s);
+		 }
+	 }
+	
 }

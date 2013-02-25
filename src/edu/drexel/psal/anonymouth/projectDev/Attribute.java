@@ -27,6 +27,8 @@ public class Attribute {
 	
 	private double targetValue;
 	
+	private int requiredDirectionOfChange; // 0 for no change, -1 to decrease, 1 to increase;
+	
 	private double targetCentroid;
 	
 	private double targetAvgAbsDev;
@@ -65,7 +67,9 @@ public class Attribute {
 	
 	private double targetClusterMax;
 	
-	private double percentChangeNeeded;
+	private boolean hasReachedTargetFlag = false;
+	
+	private boolean directionSet = false;
 	
 	/**
 	 * Constructor for Attribute class.
@@ -168,18 +172,23 @@ public class Attribute {
 	}
 	
 	/**
-	 * Sets this attributes (features) target value, and sets the percentChangeNeeded for each feature (with sign)
+	 * Sets this attributes (features) target value
 	 * @param targetValue
 	 */
 	public void setTargetValue(double targetValue){
-		this.targetValue = targetValue;
-		double temp;
-		if(toModifyValue != 0){
-			temp = (toModifyValue - this.targetValue)/toModifyValue;// signedness matters, don't take abs. value
+		if(!directionSet){
+			this.targetValue = targetValue;
+			if(this.targetValue > toModifyValue)
+				requiredDirectionOfChange = 1;
+			else if (this.targetValue == toModifyValue){
+				requiredDirectionOfChange = 0;
+				hasReachedTargetFlag = true;
+			}
+			else
+				requiredDirectionOfChange = -1;
+			directionSet = true;
 		}
-		else
-			temp = Math.ceil(this.targetValue); // if value doesnt exist in document, set percent change needed to the ceil value of the  target value (e.g. add 5 occurrences of 'if': 500%)
-		percentChangeNeeded = temp*100;
+		
 	}
 	
 	/**
@@ -328,6 +337,10 @@ public class Attribute {
 	 */
 	public void setToModifyValue(double toModifyValue){
 		this.toModifyValue = toModifyValue;
+		if((this.toModifyValue >= targetValue) && (requiredDirectionOfChange > 0))
+			hasReachedTargetFlag = true;	
+		else if ((this.toModifyValue <= targetValue) && (requiredDirectionOfChange < 0))
+			hasReachedTargetFlag = true;
 	}
 	
 	/**
@@ -401,9 +414,38 @@ public class Attribute {
 			return -1;
 	}
 	
+	/**
+	 * returns the percent change needed for the feature contained by this Attribute. Signed, so a negative number indicates the feature needs to be removed, 
+	 * and vice versa. Percent change needed is calculated at the time of function call, so the returned value will always be the most recent.
+	 * @return
+	 */
 	public double getPercentChangeNeeded(){
-		return percentChangeNeeded;
+		double temp = 0;
+		double minimumPercentChangeUnit = 0;
+		double halfOfMin;
+		double theModulus;
+		if(toModifyValue != 0){
+			minimumPercentChangeUnit = ((100/toModifyValue)/100);
+			halfOfMin =minimumPercentChangeUnit / 2;
+			temp = (targetValue - toModifyValue)/toModifyValue;// signedness matters, don't take abs. value
+			theModulus = temp % minimumPercentChangeUnit;
+			if ((temp*requiredDirectionOfChange  < 0)  && (Math.abs(temp) <minimumPercentChangeUnit)  ) // if the required direction of change is not the same sign (or 0) as temp,
+				// and the percent change needed is less than a minimumPercentChangeUnit,  (i.e., if it wants to move you backward past the target value), temp = 0
+				temp = 0;
+			else if ( (theModulus/2) < halfOfMin) //  otherwise, if percent change needed is less than halfway between a minimumPercentChangeUnit,
+				temp = temp - theModulus; // round down to the closest minimumPercentChangeUnit
+			else // otherwise, if percent change needed is greater than or exactly halfway between a minimumPercentChangeUnit,
+				temp = temp + (minimumPercentChangeUnit - theModulus); // round up to the next highest minimumPercentChangeUnit
+				
+		}
+		else
+			temp = Math.ceil(this.targetValue); // if value doesnt exist in document, set percent change needed to the ceil value of the  target value (e.g. add 5 occurrences of 'if': 500%)
+			// XXX NOTE: I am rounding this up because if the feature doesn't exist, and it should be present, it seems that it would be
+			// fairly important to add. However, taking the actual percent change that it would need is impossible (div. by zero)...
+		return temp*100; 
 	}
+
+		
 	
 	
 	public void setAuthorConfidence(double authorConfidence){
@@ -436,6 +478,8 @@ public class Attribute {
 			return 0;
 		
 	}
+
+
 	
 
 }

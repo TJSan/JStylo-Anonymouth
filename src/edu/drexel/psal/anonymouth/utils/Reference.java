@@ -1,5 +1,6 @@
 package edu.drexel.psal.anonymouth.utils;
 
+import edu.drexel.psal.anonymouth.projectDev.DataAnalyzer;
 import edu.drexel.psal.jstylo.generics.Logger;
 import edu.drexel.psal.jstylo.generics.Logger.LogOut;
 
@@ -27,7 +28,16 @@ public class Reference {
 	}
 	
 	/**
-	 * Merges two Reference objects iff they have matching 'index' values
+	 * Constructor
+	 * @param r
+	 */
+	public Reference(Reference r){
+		this.index = r.index;
+		this.value = r.value;
+	}
+	
+	/**
+	 * Merges two Reference objects if they have matching 'index' values
 	 * @param ref
 	 * @return
 	 */
@@ -48,6 +58,7 @@ public class Reference {
 	 * Equals method to set two References equal to eachother if they hold the same 'index' (i.e. if they 'point' to the same attribute)
 	 */
 	public boolean equals(Object o){
+		//Logger.logln("Using the Reference equals.");
 		if(index == ((Reference)o).index)
 			return true;
 		else
@@ -62,6 +73,7 @@ public class Reference {
 	 * 	hashcode
 	 */
 	public int hashCode(){
+		Logger.logln("This is the hashcode being called",LogOut.STDERR);
 		final int thePrime = 31;
 		final int arbitraryLargePrime = 987643211;
 		long longHash = 7;
@@ -75,6 +87,6 @@ public class Reference {
 	 * returns a string: "[index => value]"
 	 */
 	public String toString(){
-		return "["+index+" => "+value+"]";
+		return "["+index+" => "+value+" percentChange: "+DataAnalyzer.topAttributes[index].getPercentChangeNeeded()+"]";
 	}
 }

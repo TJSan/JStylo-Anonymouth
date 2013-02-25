@@ -18,23 +18,29 @@ import edu.drexel.psal.anonymouth.utils.Trie;
  * 
  */
 
-public class FunctionWord {
-	
-	protected String[] functionWordArray=new String[486];//make this larger if more words are added
+public class FunctionWord implements Runnable {
+	private final int fWordArrSize=486;//make this larger if more words are added
+	protected String[] functionWordArray=new String[fWordArrSize];
 	private ArrayList<String> functionWordList;
 	private static String filePath="src/edu/drexel/psal/resources/koppel_function_words.txt";
 	private Trie node;
 
 	public FunctionWord() {
+		
+	}
+	
+	public void run(){
 		functionWordList=readFunctionWords();
-		for(int i=0;i<functionWordArray.length;i++){
+		for(int i=0;i<fWordArrSize;i++){
 			functionWordArray[i]=functionWordList.get(i);
 		}
 		node = new Trie();
 		node.addWords(functionWordArray);
+		Logger.logln("FINISHED INITIALIZING FUNCTION WORDS",Logger.LogOut.STDERR);
+		System.out.println("TEST CASE: "+this.searchListFor("The"));
+			
+		//System.exit(0);
 	}
-	
-	
 	public boolean searchListFor(String str){
 		return node.find(str);
 	}
@@ -44,7 +50,7 @@ public class FunctionWord {
 	}
 	
 	
-	public static ArrayList<String> readFunctionWords(){
+	private static ArrayList<String> readFunctionWords(){
 		ArrayList<String> functionWords=new ArrayList<String>();
 		
 		 try {
@@ -71,7 +77,7 @@ public class FunctionWord {
 	public static void main(String[] args){//times the execution of the search on the list of function words.
 		
 		FunctionWord fWord=new FunctionWord();
-		
+		fWord.run();
 		String findStr;
 		Random randomGen = new Random(); 
 		int num;
@@ -81,7 +87,7 @@ public class FunctionWord {
 		for(int i=0;i<fWord.functionWordList.size();i++){
 			num=Math.abs(randomGen.nextInt()%fWord.functionWordList.size());
 			findStr=fWord.functionWordList.get(num);			
-			//System.out.println(tt.find(findStr));
+			System.out.println(fWord.searchListFor(findStr));
 			fWord.searchListFor(findStr);
 		}
 		endTime = System.currentTimeMillis();

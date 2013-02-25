@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 import weka.classifiers.Classifier;
+import weka.classifiers.functions.SMO;
 import weka.core.Instances;
 import edu.drexel.psal.anonymouth.gooie.EditorTabDriver;
 import edu.drexel.psal.anonymouth.gooie.ThePresident;
@@ -52,6 +53,10 @@ public class DocumentMagician {
 	ProblemSet jamDocSet;
 	
 	public static int numSampleAuthors;
+	
+	public static boolean classifier_saved = false;
+	
+	public static String classifier_path = "";
 	
 	private List<Document> trainSet;
 	
@@ -206,6 +211,7 @@ public class DocumentMagician {
 			writer.write(modifiedDocument);
 			writer.close();
 		} catch (IOException e) {
+			
 			//TODO: log this. 
 			e.printStackTrace();
 		}
@@ -313,10 +319,18 @@ public class DocumentMagician {
 	 * against all sample documents (user's samples, and 'other' samples)
 	 * @throws Exception
 	 */
-	public synchronized void runWeka() throws Exception{
+	public synchronized void runWeka(){
 		Logger.logln("Called runWeka");
 		WekaAnalyzer waz = new WekaAnalyzer(theClassifier);
-		wekaResultMap = waz.classify(authorAndTrainDat,toModifyDat,toModifySet);// ?
+		// hack this is just for testing purposes
+		classifier_path = "trained_classifiers/"+ThePresident.sessionName;
+		if(classifier_saved == false){
+			wekaResultMap = waz.classify(authorAndTrainDat,toModifyDat,toModifySet);// ?
+			classifier_saved = true;
+		}
+		else{
+			wekaResultMap = waz.classify(authorAndTrainDat,toModifyDat,toModifySet);// ?
+		}
 		Logger.logln("Weka Done");
 	}
 		
@@ -330,7 +344,7 @@ public class DocumentMagician {
 	public void initialDocToData(ProblemSet pSet,CumulativeFeatureDriver cfd, Classifier classifier ){//,List<Map<String,Document>> forTraining, List<Document> forTesting){
 		Logger.logln("Entered initialDocToData in DocumentMagician");
 		theClassifier = classifier;
-		System.out.println(pSet.toString());
+		//System.out.println(pSet.toString());
 		ProblemSet pSetCopy = new ProblemSet(pSet);
 		trainSet = pSetCopy.getAllTrainDocs();
 		

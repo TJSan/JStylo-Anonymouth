@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
@@ -50,7 +51,7 @@ public class DataAnalyzer{
 	
 	public static Attribute[] topAttributes;
 	
-	private int lengthTopAttributes;
+	public static int lengthTopAttributes;
 	
 	private String[] importantAttribs;
 	
@@ -274,6 +275,7 @@ public class DataAnalyzer{
 				}
 			}
 			*/
+			
 			if(toModifyIndex == -1){
 				//System.out.println("CONTINUING attribute: "+attrib+" does not appear in toModifyDocument.");
 				numFeatures++;
@@ -315,6 +317,7 @@ public class DataAnalyzer{
 			
 		}
 		Logger.logln("found all top attributes");
+		
 		return topAttribs;	
 	}
 	
@@ -411,7 +414,6 @@ public class DataAnalyzer{
 			//System.out.print(thisVal+", ");
 			//System.out.println();
 		}
-		
 		
 		Logger.logln("****** Current list of Present values for: "+ThePresident.sessionName+" process request number: "+DocumentMagician.numProcessRequests+" ******");
 		Logger.logln(holderForLogger.entrySet().toString());
@@ -541,12 +543,12 @@ public class DataAnalyzer{
 		Logger.logln("called runIntitial in DataAnalyzer");
 		//String authorToRemove = magician.loadExampleSet();
 		List<Document> tempTrainDocs = pSet.getAllTrainDocs();
-		/*
+	/*
 		for (Document d:tempTrainDocs){
 			pSet.removeTrainDocAt(d.getAuthor(),d);
 			pSet.addTrainDoc(d.getAuthor(), SentenceTools.removeUnicodeControlChars(d));
 		}
-		*/
+	*/	
 		List<Document> tempTestDocs = pSet.getTestDocs();
 		for (Document d:tempTestDocs){
 			d.setAuthor(DocumentMagician.dummyName);

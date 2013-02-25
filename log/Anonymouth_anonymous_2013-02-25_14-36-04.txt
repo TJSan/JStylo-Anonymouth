@@ -1,0 +1,27 @@
+Started log log/Anonymouth_anonymous_2013-02-25_14-36-04.txt
+===================================================
+14-36-04: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\9_features.xml
+14-36-04: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_feature_set.xml
+14-36-04: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_feature_set_limited.xml
+14-36-04: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_german.xml
+14-36-04: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_limited_norm.xml
+14-36-04: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_russian.xml
+14-36-04: Populating event drivers...
+14-36-04: adding event drivers under Basic
+14-36-04: adding event drivers under Part-Of-Speech
+14-36-04: adding event drivers under Grams
+14-36-04: adding event drivers under Dictionary
+14-36-04: adding event drivers under Counters
+14-36-04: adding event drivers under Readability Metrics
+14-36-04: adding event drivers under Misc.
+14-36-04: done!
+14-36-04: Populating canonicizers...
+14-36-04: done!
+14-36-04: Populating event cullers...
+14-36-04: done!
+14-36-04: EditorInnerTabSpawner spawning tab
+14-36-14: 'Load Problem Set' button clicked on the documents tab
+14-36-39: Trying to load problem set from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\problem_sets\drexel_1.xml
+14-36-39: GUI Update: update documents tab with current problem set started
+14-36-39: Failed loading C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\problem_sets\drexel_1.xml
+14-36-39: java.lang.NullPointerException

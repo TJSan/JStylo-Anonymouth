@@ -153,6 +153,7 @@ public class TargetExtractor {
 				}
 				if(notFound == true){	
 					if(skipSet.size() > 10000){
+						Logger.logln("kPlusPlusPrep reached 10k tries.");
 						tooManyTries = true;
 						break;
 					}
@@ -182,6 +183,7 @@ public class TargetExtractor {
 			if(maxCentroidsFound==true)
 				break;
 			if(tooManyTries == true){
+				Logger.logln("Calling kPlusPlusPrep again from within itself.");
 				kPlusPlusPrep();
 				break;
 			}
@@ -658,7 +660,7 @@ public class TargetExtractor {
 		
 		for(i = 0; i < numClusters; i++){
 			preferences[i][0] =(Double)(double) i;
-			preferences[i][1] = (dists[i])*(sizes[i]/sizeAvg); //  (average distance * distance)*(cluster size/ average cluster size)
+			preferences[i][1] = (dists[i])*(sizes[i]/sizeAvg); //  ( distance)*(cluster size/ average cluster size)
 			
 		}
 		

@@ -54,7 +54,8 @@ public class SentenceTools  {
 	private boolean mustAddToIndex = false;
 	private String[] notEndsOfSentence = {"Dr.","Mr.","Mrs.","Ms.","St.","vs.","U.S.","Sr.","Sgt.","R.N.","pt.","mt.","mts.","M.D.","Ltd.","Jr.","Lt.","Hon.","i.e.","e.x.","inc.",
 			"et al.","est.","ed.","D.C.","B.C.","B.S.","Ph.D.","B.A.","A.B.","A.D.","A.M.","P.M.","Ln.","fig.","p.","pp.","ref.","r.b.i.","V.P.","yr.","yrs.","etc.","..."};
-	//what if a name like F. Scott Fitzgerald
+	//what if a name like F. Scott Fitzgerald 
+			// ^^ To whoever said this, then we are in trouble. - AweM
 	
 	/**
 	 * Takes a text (one String representing an entire document), and breaks it up into sentences. Tries to find true ends of sentences: shouldn't break up sentences containing quoted sentences, 
