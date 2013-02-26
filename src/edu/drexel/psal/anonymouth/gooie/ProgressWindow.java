@@ -72,7 +72,7 @@ public class ProgressWindow extends JDialog
 	
 	public void closeWindow() 
 	{
-		//main.setEnabled(true);
+		main.setEnabled(true); // to ensure its enabled, even if we didnt disable it to begin with
         WindowEvent wev = new WindowEvent(this, WindowEvent.WINDOW_CLOSING);
         Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(wev);
 	}

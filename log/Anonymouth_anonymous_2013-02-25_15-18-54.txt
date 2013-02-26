@@ -1,0 +1,22 @@
+Started log log/Anonymouth_anonymous_2013-02-25_15-18-54.txt
+===================================================
+15-18-55: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\9_features.xml
+15-18-55: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_feature_set.xml
+15-18-55: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_feature_set_limited.xml
+15-18-55: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_german.xml
+15-18-55: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_limited_norm.xml
+15-18-55: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_russian.xml
+15-18-55: Populating event drivers...
+15-18-55: adding event drivers under Basic
+15-18-55: adding event drivers under Part-Of-Speech
+15-18-55: adding event drivers under Grams
+15-18-55: adding event drivers under Dictionary
+15-18-55: adding event drivers under Counters
+15-18-55: adding event drivers under Readability Metrics
+15-18-55: adding event drivers under Misc.
+15-18-55: done!
+15-18-55: Populating canonicizers...
+15-18-55: done!
+15-18-55: Populating event cullers...
+15-18-55: done!
+15-18-55: Creating Documents Tab...

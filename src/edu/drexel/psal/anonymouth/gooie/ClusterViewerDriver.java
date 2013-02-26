@@ -50,8 +50,6 @@ public class ClusterViewerDriver {
 	public static void initializeClusterViewer(GUIMain main, boolean showMessage){
 		int i = 0;
 		Logger.logln("Initializing ClusterViewer");
-		//main.mainJTabbedPane.getComponentAt(4).setEnabled(true);
-		//main.mainJTabbedPane.getComponentAt(3).setEnabled(false);
 		int numPanels = ClusterViewer.allPanels.length;
 		for(i=5; i< numPanels;i++){
 			if(i== 19 || i == 20)
@@ -80,7 +78,11 @@ public class ClusterViewerDriver {
 		ClusterViewer.selectedClustersByFeature = theOne;
 		lenJPanels = ClusterViewer.allPanels.length;
 		for(i=0;i<lenJPanels;i++)
+		{
+			ClusterViewer.allPanels[i].revalidate();
 			ClusterViewer.allPanels[i].repaint();
+		}
+			
 		/*if(showMessage == true)
 			JOptionPane.showMessageDialog(main, "The red dot is where each of your features are now.\nThe center of the " +
 					"green oval is where they will be after you are done editing.\nAccept these targets if they all look reasonably " +

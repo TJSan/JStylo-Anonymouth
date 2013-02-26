@@ -406,6 +406,10 @@ public class GUIMain extends javax.swing.JFrame
 		private TableModel oldResultsTableModel = null;
 		private TableCellRenderer tcr = new DefaultTableCellRenderer();
 		
+		protected JComboBox featuresBox;
+		protected DefaultComboBoxModel featuresBoxModel;
+		protected JComboBox subFeaturesBox;
+		protected DefaultComboBoxModel subFeaturesBoxModel;
 		protected JScrollPane clusterScrollPane;
 		protected ScrollablePanel holderPanel;
 		protected JPanel topPanel;
@@ -454,6 +458,8 @@ public class GUIMain extends javax.swing.JFrame
 	
 	//used mostly for loading the main document without having to alter the main.ps.testDocAt(0) directly
 	Document mainDocPreview;
+	protected ArrayList<String> features = new ArrayList<String>();
+	protected ArrayList<ArrayList<String>> subfeatures = new ArrayList<ArrayList<String>>();
 	
 	/**
 	 * Auto-generated main method to display this JFrame
@@ -688,6 +694,44 @@ public class GUIMain extends javax.swing.JFrame
 		}
 		
 		return ready;
+	}
+	
+	public void addClusterFeatures (String[] names)
+	{
+		Arrays.sort(names);
+		// add the blank holder at top
+		features.add("");
+		subfeatures.add(new ArrayList<String>());
+		for (int i = 0; i < names.length; i++)
+		{
+			String feature = null;
+			String subfeature = null;
+			
+			// get the feature and subfeature from the name
+			if (names[i].contains("--"))
+			{
+				feature = names[i].substring(0, names[i].indexOf("--"));
+				subfeature = names[i].substring(names[i].indexOf("--")+2, names[i].length());
+			}
+			else
+				feature = names[i];
+			
+			// if the feature doesnt exist yet, add it to the feature list
+			if (!features.contains(feature))
+			{
+				features.add(feature);
+				subfeatures.add(new ArrayList<String>());
+				if (subfeature != null)
+					subfeatures.get(features.indexOf(feature)).add(subfeature);
+			}
+			else // if the feature does exist, add its subfeature to the subfeature list
+			{
+				if (subfeature != null)
+					subfeatures.get(features.indexOf(feature)).add(subfeature);
+			}
+		}
+		featuresBoxModel = new DefaultComboBoxModel(features.toArray());
+		featuresBox.setModel(featuresBoxModel);
 	}
 	
 	/**
@@ -1265,32 +1309,48 @@ public class GUIMain extends javax.swing.JFrame
 			
 			JPanel legend = new JPanel();
 			legend.setLayout(new MigLayout(
-					"wrap 3",
+					"wrap 3, ins 0",
 					"[][grow, fill][grow, fill]",
-					"20"));
+					"[20]0[20][20]0[20][20]0[20]0[20]"));
 			{
 				JLabel featuresLabel = new JLabel("Features:");
-				JComboBox featuresBox = new JComboBox();
+				featuresLabel.setHorizontalAlignment(SwingConstants.CENTER);
+				featuresLabel.setOpaque(true);
+				featuresLabel.setBackground(tan);
+				featuresLabel.setBorder(BorderFactory.createRaisedBevelBorder());
+				
+				featuresBox = new JComboBox();
+				((JLabel)featuresBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
 				
 				JLabel subFeaturesLabel = new JLabel("Sub-Features:");
-				JComboBox subFeaturesBox = new JComboBox();
+				subFeaturesLabel.setHorizontalAlignment(SwingConstants.CENTER);
+				subFeaturesLabel.setOpaque(true);
+				subFeaturesLabel.setBackground(tan);
+				subFeaturesLabel.setBorder(BorderFactory.createRaisedBevelBorder());
+				
+				subFeaturesBox = new JComboBox();
+				((JLabel)subFeaturesBox.getRenderer()).setHorizontalAlignment(SwingConstants.CENTER);
+				subFeaturesBox.setEnabled(false);
 				
 				JLabel presentValueLabel = new JLabel("Present Value:");
+				
 				JPanel presentValuePanel = new JPanel();
 				presentValuePanel.setBackground(Color.black);
 				
 				JLabel normalRangeLabel = new JLabel("Normal Range:");
+				
 				JPanel normalRangePanel = new JPanel();
 				normalRangePanel.setBackground(Color.red);
 				
 				JLabel safeZoneLabel = new JLabel("Safe Zone:");
+				
 				JPanel safeZonePanel = new JPanel();
 				safeZonePanel.setBackground(Color.green);
 				
-				legend.add(featuresLabel);
-				legend.add(featuresBox, "span 2");
-				legend.add(subFeaturesLabel);
-				legend.add(subFeaturesBox, "span 2");
+				legend.add(featuresLabel, "span 3, grow");
+				legend.add(featuresBox, "span 3, grow");
+				legend.add(subFeaturesLabel, "span 3, grow");
+				legend.add(subFeaturesBox, "span 3, grow");
 				legend.add(presentValueLabel);
 				legend.add(presentValuePanel, "skip 1");
 				legend.add(normalRangeLabel);

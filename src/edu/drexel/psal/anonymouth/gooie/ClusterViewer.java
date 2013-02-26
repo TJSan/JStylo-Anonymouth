@@ -3,6 +3,7 @@ package edu.drexel.psal.anonymouth.gooie;
 import java.awt.*;
 import java.awt.geom.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -194,10 +195,13 @@ public class ClusterViewer extends JPanel {
 		i=0;
 		int[] initialLayoverVals = new int[numFeatures];
 		ClusterViewerDriver.namePanels = new JPanel[numFeatures];
-		while(outerLevel.hasNext()){
+		String[] usedNames = new String[numFeatures];
+		while(outerLevel.hasNext())
+		{
 			JPanel namePanel = new JPanel();
 			namePanel.add(new JLabel(names[i]));
 			ClusterViewerDriver.namePanels[i] = namePanel;
+			usedNames[i] = names[i];
 			
 			JPanel oneOfMany = new ClusterViewer(outerLevel.next(),i,minimums[i],maximums[i], authorMin[i],authorMax[i],presentValues[i]);
 			
@@ -205,7 +209,8 @@ public class ClusterViewer extends JPanel {
 			initialLayoverVals[i] = 1;
 			i++;
 			
-		}	
+		}
+		GUIMain.inst.addClusterFeatures(usedNames);
 		/*
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {

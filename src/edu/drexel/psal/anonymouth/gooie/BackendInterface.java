@@ -234,157 +234,121 @@ public class BackendInterface {
 			//this.eits = EditorTabDriver.eitsList.get(selectedIndex);
 		}
 		
-		public String getDocFromCurrentTab(){
+		public String getDocFromCurrentTab()
+		{
 			return main.editorBox.getText();
 		}
 		
-		public void run(){
-			try{
+		public void run()
+		{
+			try
+			{
 				main.editorBox.setEnabled(true);
 				DocumentMagician.numProcessRequests++;
-			//System.out.println("Still in EditTabProcessButtonClicked...STARTING RUN METHOD.");
-			//main.featureNameLabel.setText("Feature Name: ");
-			//main.targetValueField.setText("null");
-			//main.presentValueField.setText("null");
-			//main.editorBox.getHighlighter().removeAllHighlights();
-			TheOracle.resetColorIndex();
-			//main.resultsTablePane.setEnabled(false);
-			String tempDoc = "";
-			if(EditorTabDriver.isFirstRun == true){
-				ConsolidationStation.functionWords.run();
-				tempDoc = getDocFromCurrentTab();
-				//eits.editorBox.setText("ThisWorked!");
-				//Scanner in = new Scanner(System.in);
-				//in.next();
-				//EditorTabDriver.eitsList.get(selectedIndex).editorBox.setText("NO! THIS WORKED!");
-				//in.next();
-				//EditorTabDriver.eitsList.get(selectedIndex).editorBox = eits.editorBox;
-				//in.next();
+				TheOracle.resetColorIndex();
+				String tempDoc = "";
 				
-				Logger.logln("Process button pressed for first time (initial run) in editor tab");
-				
-				pw.setText("Extracting and Clustering Features...");
-				try{
-					wizard.runInitial(magician,main.cfd, main.classifiers.get(0));
-					pw.setText("Extracting and Clustering Features... Done");
-					pw.setText("Initializing Tagger...");
-					
-					//ConsolidationStation.attribs=wizard.getAttributes();//not the best maybe??	
-					//ConsolidationStation.getStringsFromAttribs();
-					Tagger.initTagger();
-					
-					
-					//where is the COnsolidationStation intialized??
-					
-					//ConsolidationStation.toModifyTaggedDocs = ;
-					
-					pw.setText("Initialize Cluster Viewer...");
-					ClusterViewerDriver.initializeClusterViewer(main,true);
-					pw.setText("Initialize Cluster Viewer... Done");
-					pw.setText("Classifying Documents...");
-					magician.runWeka();
-					pw.setText("Classifying Documents... Done");
-					pw.closeWindow();
-					//ConsolidationStation.attribs=wizard.getAttributes();//not the best maybe??	
-					//ConsolidationStation.getStringsFromAttribs();//moving this...
-				}
-				catch(Exception e){
-					e.printStackTrace();
-					ErrorHandler.fatalError();
-				}
-				
-				Map<String,Map<String,Double>> wekaResults = magician.getWekaResultList();
-				Logger.logln(" ****** WEKA RESULTS for session '"+ThePresident.sessionName+" process number : "+DocumentMagician.numProcessRequests);
-				Logger.logln(wekaResults.toString());
-				//main.getResultsTable().setDefaultRenderer(Object.class, new MyTableRenderer()); 
-				//addNewDocEditTab();
-				makeResultsTable(wekaResults, main);
-				//main.getResultsTable().getColumnModel().getColumn(resultsMaxIndex).setCellRenderer(new MyTableRenderer());
-				
-			}
-			else{//This reprocesses
-				Logger.logln("Process button pressed to re-process document to modify.");
-				tempDoc = getDocFromCurrentTab();
-				if(tempDoc.equals("") == true){
-					JOptionPane.showMessageDialog(null,
-							"It is not possible to process an empty document.",
-							"Document processing error",
-							JOptionPane.ERROR_MESSAGE,
-							GUIMain.iconNO);
-				}
-				else{
-					magician.setModifiedDocument(tempDoc);
-					main.editorBox.setEditable(false);
-					main.editorBox.setEnabled(true);
+				if(EditorTabDriver.isFirstRun == true)
+				{
+					ConsolidationStation.functionWords.run();
+					tempDoc = getDocFromCurrentTab();
+					Logger.logln("Process button pressed for first time (initial run) in editor tab");
 					
 					pw.setText("Extracting and Clustering Features...");
-					try {
-						wizard.reRunModified(magician);
+					try
+					{
+						wizard.runInitial(magician,main.cfd, main.classifiers.get(0));
 						pw.setText("Extracting and Clustering Features... Done");
+						pw.setText("Initializing Tagger...");
+						
+						Tagger.initTagger();
+						
 						pw.setText("Initialize Cluster Viewer...");
-						ClusterViewerDriver.initializeClusterViewer(main,false);
+						ClusterViewerDriver.initializeClusterViewer(main,true);
 						pw.setText("Initialize Cluster Viewer... Done");
 						pw.setText("Classifying Documents...");
 						magician.runWeka();
 						pw.setText("Classifying Documents... Done");
-					} catch (Exception e) {
+						pw.closeWindow();
+					}
+					catch(Exception e){
 						e.printStackTrace();
 						ErrorHandler.fatalError();
 					}
-					pw.setText("Setting Results...");
+					
 					Map<String,Map<String,Double>> wekaResults = magician.getWekaResultList();
 					Logger.logln(" ****** WEKA RESULTS for session '"+ThePresident.sessionName+" process number : "+DocumentMagician.numProcessRequests);
 					Logger.logln(wekaResults.toString());
-					//main.getResultsTable().setDefaultRenderer(Object.class, new MyTableRenderer()); 
-					//addNewDocEditTab();
 					makeResultsTable(wekaResults, main);
-					//main.getResultsTable().getColumnModel().getColumn(resultsMaxIndex).setCellRenderer(new MyTableRenderer());
-					//XXX STOP HERE
-					pw.setText("Setting Results... Done");
-					
-					
-					//main.processButton.setText("Re-process");
-					//main.processButton.setToolTipText("Click this button once you have made all changes in order to see how they have affected the classification of your document.");
-					//main.processButton.setSize(main.processButton.getSize().width+3,main.processButton.getSize().height);
-					
 				}
-			}
-			//System.out.println("FINISHED in EditTabProcessButtonClicked - Program use may continue.");
-			String chosenOne = EditorTabDriver.chosenAuthor;
-//			if(chosenOne.equals(ProblemSet.getDummyAuthor()))
-//				main.classificationLabel.setText("Unfortunately, your document seems to have been written by: "+EditorTabDriver.chosenAuthor);//TODO: change this nonsense
-//			else if (chosenOne.equals("n/a"))
-//				main.classificationLabel.setText("Please process your document in order to recieve a classification result.");
-//			else
-//				main.classificationLabel.setText("Your document appears as if '"+EditorTabDriver.chosenAuthor+"' wrote it!");
-			
-			int selectedIndex = 1;
-			int trueIndex = selectedIndex - 1;
-			Logger.logln("Cluster Group number '"+trueIndex+"' selected: " + ClusterViewerDriver.getStringRep()[selectedIndex]);
-			Logger.logln("Cluster Group chosen by Anonymouth: "+ClusterViewerDriver.getStringRep()[1]);
-			DataAnalyzer.selectedTargets = ClusterViewerDriver.getIntRep()[trueIndex];
-			Logger.logln("INTREP: "+ClusterViewerDriver.getIntRep()[trueIndex]);//added this.
-			EditorTabDriver.wizard.setSelectedTargets();
-			EditorTabDriver.signalTargetsSelected(main, true);
-			//eits.editorBox.setText(tempDoc);	
-			//cpb.setText("Waiting for Target Selection...");
-			}
-			catch (Exception e){
-				e.printStackTrace();
-				// Get current size of heap in bytes
-				long heapSize = Runtime.getRuntime().totalMemory();
-
-				// Get maximum size of heap in bytes. The heap cannot grow beyond this size.
-				// Any attempt will result in an OutOfMemoryException.
-				long heapMaxSize = Runtime.getRuntime().maxMemory();
-
-				// Get amount of free memory within the heap in bytes. This size will increase
-				// after garbage collection and decrease as new objects are created.
-				long heapFreeSize = Runtime.getRuntime().freeMemory();
-				Logger.logln("Something happend. Here are the total, max, and free heap sizes:");
-				Logger.logln("Total: "+heapSize+" Max: "+heapMaxSize+" Free: "+heapFreeSize);
-			}
-			
+				else //This reprocesses
+				{
+					Logger.logln("Process button pressed to re-process document to modify.");
+					tempDoc = getDocFromCurrentTab();
+					if(tempDoc.equals("") == true)
+					{
+						JOptionPane.showMessageDialog(null,
+								"It is not possible to process an empty document.",
+								"Document processing error",
+								JOptionPane.ERROR_MESSAGE,
+								GUIMain.iconNO);
+					}
+					else
+					{
+						magician.setModifiedDocument(tempDoc);
+						main.editorBox.setEditable(false);
+						main.editorBox.setEnabled(true);
+						
+						pw.setText("Extracting and Clustering Features...");
+						try 
+						{
+							wizard.reRunModified(magician);
+							pw.setText("Extracting and Clustering Features... Done");
+							pw.setText("Initialize Cluster Viewer...");
+							ClusterViewerDriver.initializeClusterViewer(main,false);
+							pw.setText("Initialize Cluster Viewer... Done");
+							pw.setText("Classifying Documents...");
+							magician.runWeka();
+							pw.setText("Classifying Documents... Done");
+						} catch (Exception e) {
+							e.printStackTrace();
+							ErrorHandler.fatalError();
+						}
+						pw.setText("Setting Results...");
+						Map<String,Map<String,Double>> wekaResults = magician.getWekaResultList();
+						Logger.logln(" ****** WEKA RESULTS for session '"+ThePresident.sessionName+" process number : "+DocumentMagician.numProcessRequests);
+						Logger.logln(wekaResults.toString());
+						makeResultsTable(wekaResults, main);
+						pw.setText("Setting Results... Done");
+					}
+				}
+				int selectedIndex = 1;
+				int trueIndex = selectedIndex - 1;
+				Logger.logln("Cluster Group number '"+trueIndex+"' selected: " + ClusterViewerDriver.getStringRep()[selectedIndex]);
+				Logger.logln("Cluster Group chosen by Anonymouth: "+ClusterViewerDriver.getStringRep()[1]);
+				DataAnalyzer.selectedTargets = ClusterViewerDriver.getIntRep()[trueIndex];
+				Logger.logln("INTREP: "+ClusterViewerDriver.getIntRep()[trueIndex]);//added this.
+				EditorTabDriver.wizard.setSelectedTargets();
+				EditorTabDriver.signalTargetsSelected(main, true);
+				//eits.editorBox.setText(tempDoc);	
+				//cpb.setText("Waiting for Target Selection...");
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+					// Get current size of heap in bytes
+					long heapSize = Runtime.getRuntime().totalMemory();
+	
+					// Get maximum size of heap in bytes. The heap cannot grow beyond this size.
+					// Any attempt will result in an OutOfMemoryException.
+					long heapMaxSize = Runtime.getRuntime().maxMemory();
+	
+					// Get amount of free memory within the heap in bytes. This size will increase
+					// after garbage collection and decrease as new objects are created.
+					long heapFreeSize = Runtime.getRuntime().freeMemory();
+					Logger.logln("Something happend. Here are the total, max, and free heap sizes:");
+					Logger.logln("Total: "+heapSize+" Max: "+heapMaxSize+" Free: "+heapFreeSize);
+				}
 		}
 	}
 	
@@ -419,8 +383,6 @@ public class BackendInterface {
 			pw.setText("Target Selected");
 //			TableCellRenderer renderer = new PredictionRenderer(main);
 //			main.resultsTable.setDefaultRenderer(Object.class, renderer);
-		    if(EditorTabDriver.isFirstRun == false)
-		    	main.resultsTableLabel.setText("Results of this Document's Classification (% probability of authorship per author)");
 			EditorTabDriver.theFeatures = wizard.getAllRelevantFeatures();
 			Logger.logln("The Features are: "+EditorTabDriver.theFeatures.toString());
 			//main.suggestionTable.setModel(makeSuggestionListTable(EditorTabDriver.theFeatures));
@@ -431,19 +393,10 @@ public class BackendInterface {
 			// make highlight bar
 			//main.highlightSelectionBox.setModel(makeHighlightBarModel());
 			TheOracle.setTheDocument(main.editorBox.getText());
-			//eits.processButton.setText("Re-process");
-			//eits.processButton.setToolTipText("Click this button once you have made all changes in order to see how they have affected the classification of your document.");
-			//eits.processButton.setSize(eits.processButton.getSize().width+3,eits.processButton.getSize().height);
-			main.processButton.setSelected(false);
-			
 			main.nextSentenceButton.setEnabled(false);
 			main.prevSentenceButton.setEnabled(false);
 			main.transButton.setEnabled(false);
 			main.appendSentenceButton.setEnabled(false);
-			// XXX for AFTER everything is done
-				
-			//main.highlightSelectionBox.setEnabled(true);
-			main.processButton.setSelected(false);
 			pw.setText("Tagging all documents... Done");
 			
 			//main.editorProgressBar.setIndeterminate(true);	
@@ -455,7 +408,6 @@ public class BackendInterface {
 			else
 				ConsolidationStation.toModifyTaggedDocs.get(0).makeAndTagSentences(main.editorBox.getText(), false);
 			EditorTabDriver.isFirstRun = false;	
-			main.sentenceEditPane.setText(EditorTabDriver.getHelpMessege()+" ");//the space is to differentiate this from the messege in a new inner tab.
 			
 			boolean loadIfExists = false;
 			

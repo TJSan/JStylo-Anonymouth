@@ -1,0 +1,57 @@
+Started log log/Anonymouth_anonymous_2013-02-25_15-39-28.txt
+===================================================
+15-39-29: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\9_features.xml
+15-39-29: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_feature_set.xml
+15-39-29: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_feature_set_limited.xml
+15-39-29: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_german.xml
+15-39-29: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_limited_norm.xml
+15-39-29: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_russian.xml
+15-39-29: Populating event drivers...
+15-39-29: adding event drivers under Basic
+15-39-29: adding event drivers under Part-Of-Speech
+15-39-29: adding event drivers under Grams
+15-39-29: adding event drivers under Dictionary
+15-39-29: adding event drivers under Counters
+15-39-29: adding event drivers under Readability Metrics
+15-39-29: adding event drivers under Misc.
+15-39-29: done!
+15-39-29: Populating canonicizers...
+15-39-29: done!
+15-39-29: Populating event cullers...
+15-39-29: done!
+15-39-29: Creating Documents Tab...
+15-39-37: Preset feature set selected in the features tab.
+15-39-37: loaded preset feature set: WritePrints (Limited Normalized)
+15-39-37: Preset feature set selected in the features tab.
+15-39-37: loaded preset feature set: WritePrints (Limited Normalized)
+15-39-40: Preset feature set selected in the features tab.
+15-39-40: loaded preset feature set: WritePrints
+15-39-40: Preset feature set selected in the features tab.
+15-39-40: loaded preset feature set: WritePrints
+15-39-52: 'Load Problem Set' button clicked on the documents tab
+15-39-54: Trying to load problem set from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\problem_sets\jeff_Desktop.xml
+15-39-54: GUI Update: update documents tab with current problem set started
+15-39-55: Classifier selected in the available classifiers tree in the classifiers tab: SMO
+15-40-00: 'Add' button clicked in the analysis tab.
+15-40-01: Classifier tree unselected in the classifiers tab.
+15-40-03: Intial processing starting...
+15-40-03: Created DataAnalyzer
+15-40-03: Created new DocumentMagician, is sparse?  ... false
+15-40-03: Numer of features to return: 200
+15-40-03: calling backendInterface for preTargetSelectionProcessing
+15-40-03: FINISHED INITIALIZING FUNCTION WORDS
+15-40-03: Process button pressed for first time (initial run) in editor tab
+15-40-03: called runIntitial in DataAnalyzer
+15-40-03: Entered initialDocToData in DocumentMagician
+15-40-03: True test doc author: ~* you *~
+15-40-03: Dummy author: ~* you *~
+15-40-03: Calling runPrimaryDocOps
+15-40-03: Setting CumulativeFeatureDriver in DocumentMagician
+15-40-03: Building train (with author) and toModify instances
+15-40-03: InstanceConstuctor constructed
+15-40-03: Saving temporary file: ./edited_documents/anonymous_unmodified.txt
+15-40-03: Runnng JStylo WekaInstancesBuilder from runInstanceBuilder in InstanceConstructor
+15-40-56: Preset feature set selected in the features tab.
+15-40-56: loaded preset feature set: WritePrints (Limited)
+15-40-56: Preset feature set selected in the features tab.
+15-40-56: loaded preset feature set: WritePrints (Limited)

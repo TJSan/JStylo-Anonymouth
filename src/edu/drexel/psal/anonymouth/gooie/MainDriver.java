@@ -24,6 +24,20 @@ import edu.drexel.psal.jstylo.generics.*;
 public class MainDriver 
 {
 	
+	public static void findCluster(GUIMain main, String name)
+	{
+		for (int i = 0; i < main.holderPanel.getComponentCount(); i = i + 2)
+		{
+			JPanel panel = (JPanel)main.holderPanel.getComponent(i);
+			JLabel label = (JLabel)panel.getComponent(0);
+			String labelName = label.getText();
+			if (name.equals(labelName))
+			{
+				main.clusterScrollPane.getVerticalScrollBar().setValue((i/2)*74); // 70 + 4 extra pixels for the borders
+				break;
+			}
+		}
+	}
 	
 	/**
 	 * Initialize all main listeners.
@@ -40,6 +54,33 @@ public class MainDriver
 			public void actionPerformed(ActionEvent e) 
 			{
 				main.PPSP.openWindow();
+			}
+		});
+		
+		main.featuresBox.addItemListener(new ItemListener()
+		{
+			@Override
+			public void itemStateChanged(ItemEvent e) 
+			{
+				int index = main.featuresBox.getSelectedIndex();
+				main.subFeaturesBoxModel = new DefaultComboBoxModel(main.subfeatures.get(index).toArray());
+				main.subFeaturesBox.setModel(main.subFeaturesBoxModel);
+				if (main.subfeatures.get(index).isEmpty())
+				{
+					main.subFeaturesBox.setEnabled(false);
+					findCluster(main, (String)main.featuresBox.getSelectedItem());
+				}
+				else
+					main.subFeaturesBox.setEnabled(true);
+			}
+		});
+		
+		main.subFeaturesBox.addItemListener(new ItemListener()
+		{
+			@Override
+			public void itemStateChanged(ItemEvent e) 
+			{
+				findCluster(main, (String)main.featuresBox.getSelectedItem() + "--" + (String)main.subFeaturesBox.getSelectedItem());
 			}
 		});
 		
