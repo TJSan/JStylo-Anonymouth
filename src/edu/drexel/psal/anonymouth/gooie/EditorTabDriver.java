@@ -631,6 +631,7 @@ public class EditorTabDriver {
 				}
 				main.translationEditPane.setText("Current Translation.");
 				main.sentenceEditPane.setText(sentence.getUntagged().trim());
+				main.sentenceEditPane.setCaretPosition(0);
 				highlightSentence(sentence, main);
 			}
 			
@@ -676,6 +677,7 @@ public class EditorTabDriver {
 				}
 				main.translationEditPane.setText("Current Translation.");
 				main.sentenceEditPane.setText(sentence.getUntagged().trim());
+				main.sentenceEditPane.setCaretPosition(0);
 				highlightSentence(sentence, main);
 			}
 			
