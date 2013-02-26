@@ -131,7 +131,7 @@ public class EditorTabDriver {
 			BackendInterface.postTargetSelectionProcessing(main, wizard, magician);
 	}
 	
-	protected static void highlightSentence(TaggedSentence sentence, GUIMain main)
+	protected static void highlightSentence(TaggedSentence sentence, GUIMain main, String direction)
 	{
 		String sent = sentence.getUntagged().trim();
 		int start = 0;
@@ -149,6 +149,12 @@ public class EditorTabDriver {
 		main.editorBox.getHighlighter().removeAllHighlights();
         try {
 			main.editorBox.getHighlighter().addHighlight(start, end, painter);
+			if (direction.equals("next"))
+				main.editorBox.setCaretPosition(end);
+			else if (direction.equals("prev"))
+				main.editorBox.setCaretPosition(start);
+			else if (direction.equals("none"))
+			{}
         } catch (BadLocationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -571,7 +577,7 @@ public class EditorTabDriver {
 				main.translationEditPane.setText("Current Translation.");
 				main.sentenceEditPane.setText(sentence.getUntagged().trim());
 				main.sentenceEditPane.setCaretPosition(0);
-				highlightSentence(sentence, main);
+				highlightSentence(sentence, main, "next");
 			}
 			
 		});
@@ -617,7 +623,7 @@ public class EditorTabDriver {
 				main.translationEditPane.setText("Current Translation.");
 				main.sentenceEditPane.setText(sentence.getUntagged().trim());
 				main.sentenceEditPane.setCaretPosition(0);
-				highlightSentence(sentence, main);
+				highlightSentence(sentence, main, "prev");
 			}
 			
 		});
@@ -672,7 +678,7 @@ public class EditorTabDriver {
 				sentence = taggedDoc.getCurrentSentence();
 				main.editorBox.setText(taggedDoc.getUntaggedDocument());
 				main.sentenceEditPane.setText(sentence.getUntagged().trim());
-				highlightSentence(sentence, main);
+				highlightSentence(sentence, main, "none");
 				
 					//main.sentenceEditPane.setText(ConsolidationStation.toModifyTaggedDocs.get(0).getCurrentLiveTaggedSentence());
 			}

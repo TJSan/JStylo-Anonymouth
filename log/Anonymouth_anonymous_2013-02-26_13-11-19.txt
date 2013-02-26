@@ -1,0 +1,22 @@
+Started log log/Anonymouth_anonymous_2013-02-26_13-11-19.txt
+===================================================
+13-11-19: Reading CumulativeFeatureDriver from C:\Users\Jeff\Desktop\PSAL\JSAN\JStylo-Anonymouth\jsan_resources\feature_sets\9_features.xml
+13-11-19: Reading CumulativeFeatureDriver from C:\Users\Jeff\Desktop\PSAL\JSAN\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_feature_set.xml
+13-11-19: Reading CumulativeFeatureDriver from C:\Users\Jeff\Desktop\PSAL\JSAN\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_feature_set_limited.xml
+13-11-19: Reading CumulativeFeatureDriver from C:\Users\Jeff\Desktop\PSAL\JSAN\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_german.xml
+13-11-19: Reading CumulativeFeatureDriver from C:\Users\Jeff\Desktop\PSAL\JSAN\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_limited_norm.xml
+13-11-19: Reading CumulativeFeatureDriver from C:\Users\Jeff\Desktop\PSAL\JSAN\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_russian.xml
+13-11-20: Populating event drivers...
+13-11-20: adding event drivers under Basic
+13-11-20: adding event drivers under Part-Of-Speech
+13-11-20: adding event drivers under Grams
+13-11-20: adding event drivers under Dictionary
+13-11-20: adding event drivers under Counters
+13-11-20: adding event drivers under Readability Metrics
+13-11-20: adding event drivers under Misc.
+13-11-20: done!
+13-11-20: Populating canonicizers...
+13-11-20: done!
+13-11-20: Populating event cullers...
+13-11-20: done!
+13-11-20: Creating Documents Tab...

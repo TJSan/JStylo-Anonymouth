@@ -546,7 +546,7 @@ public class GUIMain extends javax.swing.JFrame
 			this.setJMenuBar(menuBar);
 			
 			getContentPane().setLayout(new MigLayout(
-					"wrap 3, fill, gap 10 10", // layout constraints
+					"wrap 2, fill, gap 10 10", // layout constraints
 					"[][grow, growprio 110, fill][]", // column constraints
 					"[grow, fill][150:25%:]")); // row constraints)
 			
@@ -561,12 +561,13 @@ public class GUIMain extends javax.swing.JFrame
 			editorTabPane = new JTabbedPane();
 			{
 				editorTabPane.addTab("Document", createDocumentTab());
+				editorTabPane.addTab("Clusters", createClustersTab());
 			}
 			
-			clustersTabPane = new JTabbedPane();
-			{
-				clustersTabPane.addTab("Clusters", createClustersTab());
-			}
+//			clustersTabPane = new JTabbedPane();
+//			{
+//				clustersTabPane.addTab("Clusters", createClustersTab());
+//			}
 			
 			resultsTabPane = new JTabbedPane();
 			{
@@ -577,7 +578,7 @@ public class GUIMain extends javax.swing.JFrame
 			
 			getContentPane().add(editorHelpTabPane, "width 250!, spany");
 			getContentPane().add(editorTabPane, "width 600::");
-			getContentPane().add(clustersTabPane, "width 250!, spany");
+			//getContentPane().add(clustersTabPane, "width 250!, spany");
 			getContentPane().add(resultsTabPane, "width 600::, height 150:25%:");
 			
 			
