@@ -12,84 +12,33 @@ import edu.drexel.psal.anonymouth.suggestors.HighlightMapMaker;
 import edu.drexel.psal.anonymouth.suggestors.Prophecy;
 import edu.drexel.psal.anonymouth.suggestors.TheOracle;
 import edu.drexel.psal.anonymouth.utils.ConsolidationStation;
-import edu.drexel.psal.anonymouth.utils.DocumentParser;
-import edu.drexel.psal.anonymouth.utils.DocumentTagger;
-import edu.drexel.psal.anonymouth.utils.FunctionWord;
 import edu.drexel.psal.anonymouth.utils.SentenceTools;
-import edu.drexel.psal.anonymouth.utils.SynonymReplaceTest;
 import edu.drexel.psal.anonymouth.utils.TaggedDocument;
 import edu.drexel.psal.anonymouth.utils.TaggedSentence;
-import edu.drexel.psal.anonymouth.utils.TranslatedSentenceReader;
-import edu.drexel.psal.anonymouth.utils.Word;
 import edu.drexel.psal.jstylo.generics.FeatureDriver;
 import edu.drexel.psal.jstylo.generics.Logger;
-import edu.drexel.psal.jstylo.generics.WekaInstancesBuilder;
 import edu.drexel.psal.jstylo.generics.Logger.LogOut;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.beans.PropertyChangeListener;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-import javax.swing.Timer;
-import javax.swing.Action;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.KeyStroke;
-import javax.swing.ListModel;
 import javax.swing.SwingUtilities;
-import javax.swing.event.CaretEvent;
-import javax.swing.event.CaretListener;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableModel;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultHighlighter;
 import javax.swing.text.Highlighter;
-import javax.swing.text.Highlighter.HighlightPainter;
-import javax.swing.SwingWorker;
-
-
 import com.jgaap.generics.Canonicizer;
 import com.jgaap.generics.Document;
 
@@ -176,12 +125,6 @@ public class EditorTabDriver {
 	protected static TaggedDocument taggedDoc;
 	
 	private static int numberTimesFixTabs;
-	
-	private final static String helpMessege="Edit the sentence in this box.\n" +
-			"Go to the next/previous sentences by clicking the corresponding buttons.\n" +
-			"To edit multiple sentences at once, you can append the next sentence using the respective button.\n" +
-			"Clicking the features to the right will give you suggestions to help anonymize your paper.\n" +
-			"Click any of the sentence buttons to continue.";
 	
 	protected static void signalTargetsSelected(GUIMain main, boolean goodToGo){
 		if(goodToGo == true)
@@ -490,10 +433,6 @@ public class EditorTabDriver {
 			}
 		}
 		return inSent;
-	}
-
-	public static String getHelpMessege(){
-		return helpMessege;
 	}
 	
 	/**
