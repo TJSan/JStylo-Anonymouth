@@ -546,7 +546,7 @@ public class GUIMain extends javax.swing.JFrame
 			this.setJMenuBar(menuBar);
 			
 			getContentPane().setLayout(new MigLayout(
-					"wrap 3, fill", // layout constraints
+					"wrap 3, fill, gap 10 10", // layout constraints
 					"[][grow, growprio 110, fill][]", // column constraints
 					"[grow, fill][150:25%:]")); // row constraints)
 			
@@ -700,7 +700,7 @@ public class GUIMain extends javax.swing.JFrame
 	{
 		Arrays.sort(names);
 		// add the blank holder at top
-		features.add("");
+		features.add("Select A Feature...");
 		subfeatures.add(new ArrayList<String>());
 		for (int i = 0; i < names.length; i++)
 		{
@@ -722,7 +722,11 @@ public class GUIMain extends javax.swing.JFrame
 				features.add(feature);
 				subfeatures.add(new ArrayList<String>());
 				if (subfeature != null)
+				{
+					subfeatures.get(features.indexOf(feature)).add("Select A Sub-Feature...");
 					subfeatures.get(features.indexOf(feature)).add(subfeature);
+				}
+					
 			}
 			else // if the feature does exist, add its subfeature to the subfeature list
 			{
@@ -1369,6 +1373,7 @@ public class GUIMain extends javax.swing.JFrame
 					return true;
 				}
 			};
+			holderPanel.setScrollableUnitIncrement(SwingConstants.VERTICAL, ScrollablePanel.IncrementType.PIXELS, 74);
 			holderPanel.setAutoscrolls(true);
 			holderPanel.setOpaque(true);
 			BoxLayout holderPanelLayout = new BoxLayout(holderPanel, javax.swing.BoxLayout.Y_AXIS);

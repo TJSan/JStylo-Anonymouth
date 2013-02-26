@@ -1,0 +1,49 @@
+Started log log/Anonymouth_anonymous_2013-02-25_20-34-47.txt
+===================================================
+20-34-47: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\9_features.xml
+20-34-47: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_feature_set.xml
+20-34-47: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_feature_set_limited.xml
+20-34-47: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_german.xml
+20-34-47: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_limited_norm.xml
+20-34-48: Reading CumulativeFeatureDriver from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\feature_sets\writeprints_russian.xml
+20-34-48: Populating event drivers...
+20-34-48: adding event drivers under Basic
+20-34-48: adding event drivers under Part-Of-Speech
+20-34-48: adding event drivers under Grams
+20-34-48: adding event drivers under Dictionary
+20-34-48: adding event drivers under Counters
+20-34-48: adding event drivers under Readability Metrics
+20-34-48: adding event drivers under Misc.
+20-34-48: done!
+20-34-48: Populating canonicizers...
+20-34-48: done!
+20-34-48: Populating event cullers...
+20-34-48: done!
+20-34-48: Creating Documents Tab...
+20-34-59: 'Load Problem Set' button clicked on the documents tab
+20-35-00: Trying to load problem set from C:\Users\Jeff\workspace\PSAL\JStylo-Anonymouth\jsan_resources\problem_sets\jeff_Desktop.xml
+20-35-00: GUI Update: update documents tab with current problem set started
+20-35-02: Preset feature set selected in the features tab.
+20-35-02: loaded preset feature set: WritePrints
+20-35-02: Preset feature set selected in the features tab.
+20-35-02: loaded preset feature set: WritePrints
+20-35-03: Classifier selected in the available classifiers tree in the classifiers tab: SMO
+20-35-03: 'Add' button clicked in the analysis tab.
+20-35-03: Classifier tree unselected in the classifiers tab.
+20-35-05: Intial processing starting...
+20-35-05: Created DataAnalyzer
+20-35-05: Created new DocumentMagician, is sparse?  ... false
+20-35-05: Numer of features to return: 200
+20-35-05: calling backendInterface for preTargetSelectionProcessing
+20-35-05: FINISHED INITIALIZING FUNCTION WORDS
+20-35-05: Process button pressed for first time (initial run) in editor tab
+20-35-05: called runIntitial in DataAnalyzer
+20-35-05: Entered initialDocToData in DocumentMagician
+20-35-05: True test doc author: ~* you *~
+20-35-05: Dummy author: ~* you *~
+20-35-05: Calling runPrimaryDocOps
+20-35-05: Setting CumulativeFeatureDriver in DocumentMagician
+20-35-05: Building train (with author) and toModify instances
+20-35-05: InstanceConstuctor constructed
+20-35-05: Saving temporary file: ./edited_documents/anonymous_unmodified.txt
+20-35-05: Runnng JStylo WekaInstancesBuilder from runInstanceBuilder in InstanceConstructor
