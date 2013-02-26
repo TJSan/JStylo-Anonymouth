@@ -1313,7 +1313,7 @@ public class GUIMain extends javax.swing.JFrame
 			
 			JPanel legend = new JPanel();
 			legend.setLayout(new MigLayout(
-					"wrap 3, ins 0",
+					"wrap 3",
 					"[][grow, fill][grow, fill]",
 					"[20]0[20][20]0[20][20]0[20]0[20]"));
 			{
@@ -1356,11 +1356,11 @@ public class GUIMain extends javax.swing.JFrame
 				legend.add(subFeaturesLabel, "span 3, grow");
 				legend.add(subFeaturesBox, "span 3, grow");
 				legend.add(presentValueLabel);
-				legend.add(presentValuePanel, "skip 1");
+				legend.add(presentValuePanel, "span 2");
 				legend.add(normalRangeLabel);
-				legend.add(normalRangePanel, "skip 1");
+				legend.add(normalRangePanel, "span 2");
 				legend.add(safeZoneLabel);
-				legend.add(safeZonePanel, "skip 1");
+				legend.add(safeZonePanel, "span 2");
 				
 			}
 			clusterPanel.add(legend);
