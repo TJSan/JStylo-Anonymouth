@@ -36,7 +36,7 @@ public class WekaInstancesBuilder {
 	/**
 	 * Determines whether to include an attribute for document titles.
 	 */
-	private boolean hasDocNames;
+	private boolean hasDocTitles;
 	
 	/**
 	 * To hold last used cumulative feature driver.
@@ -223,7 +223,7 @@ public class WekaInstancesBuilder {
 		Attribute authorNameAttribute = new Attribute("authorName", authorNames);
 		
 		// initialize document title attribute
-		if (hasDocNames)
+		if (hasDocTitles)
 			attributeList.addElement(new Attribute("title",(FastVector)null));
 		
 		// initialize list of lists of histograms
@@ -294,13 +294,17 @@ public class WekaInstancesBuilder {
 		trainingSet.setClass(authorNameAttribute);
 		
 		// initialize vector size (including authorName and title if required) and first indices of feature classes array
-		int vectorSize = (hasDocNames ? 1 : 0);
+		int vectorSize = (hasDocTitles ? 1 : 0);
 		for (i=0; i<numOfFeatureClasses; i++) {
 			featureClassAttrsFirstIndex[i] = vectorSize;
 			vectorSize += allEvents.get(i).size();
 		}
 		featureClassAttrsFirstIndex[i] = vectorSize;
 		vectorSize += 1; // one more for authorName
+		
+		// handle sparse instances removing first values of string attributes
+		if (hasDocTitles && isSparse)
+			trainingSet.attribute(0).addStringValue("_dummy_");
 		
 		// generate training instances
 		Instance inst;
@@ -310,11 +314,11 @@ public class WekaInstancesBuilder {
 			else inst = new Instance(vectorSize);
 			
 			// update document title
-			if (hasDocNames)
+			if (hasDocTitles)
 				inst.setValue((Attribute) attributeList.elementAt(0), knownDocs.get(i).getTitle());
 			
 			// update values
-			int index = (hasDocNames ? 1 : 0);
+			int index = (hasDocTitles ? 1 : 0);
 			for (j=0; j<numOfFeatureClasses; j++) {
 				Set<Event> events = allEvents.get(j);
 				
@@ -534,11 +538,11 @@ public class WekaInstancesBuilder {
 			else inst = new Instance(vectorSize);
 			
 			// update document title
-			if (hasDocNames)
+			if (hasDocTitles)
 				inst.setValue((Attribute) attributeList.elementAt(0), unknownDocs.get(i).getTitle());
 
 			// update values
-			int index = (hasDocNames ? 1 : 0);
+			int index = (hasDocTitles ? 1 : 0);
 			for (j=0; j<numOfFeatureClasses; j++) {
 				Set<Event> events = allEvents.get(j);
 
@@ -1002,7 +1006,7 @@ public class WekaInstancesBuilder {
 	 * 		True iff it is set to include document titles as an additional attribute.
 	 */
 	public boolean hasDocNames() {
-		return hasDocNames;
+		return hasDocTitles;
 	}
 
 	/**
@@ -1011,7 +1015,7 @@ public class WekaInstancesBuilder {
 	 * 		Indicates whether to include document titles.
 	 */
 	public void setHasDocNames(boolean hasDocNames) {
-		this.hasDocNames = hasDocNames;
+		this.hasDocTitles = hasDocNames;
 	}
 	
 	/**

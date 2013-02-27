@@ -11,7 +11,11 @@ import com.jgaap.generics.*;
  */
 public class StringDocument extends Document
 {
-
+	public StringDocument()
+	{
+		super();
+	}
+	
 	/**
 	 * Copy constructor. Can be used to break object references and protect a
 	 * Document instance from being modified by other classes.
