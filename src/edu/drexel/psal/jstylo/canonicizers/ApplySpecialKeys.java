@@ -12,7 +12,6 @@ import com.jgaap.generics.Document;
  */
 public class ApplySpecialKeys extends Canonicizer {
 
-	private static SortedMap<String,String> map = null;
 	private static char CAPSLOCK;
 	private static char ENTER;
 	private static char SPACE;
@@ -35,13 +34,16 @@ public class ApplySpecialKeys extends Canonicizer {
 	private static char INSERT;
 	private static char VOLUME_UP;
 	private static char VOLUME_DOWN;
+	
+	private SortedMap<String,String> map = null;
+	private boolean applyShifts = false;
 
 	public ApplySpecialKeys()
 	{
 		if (map == null)
 		{
-			new RemoveSpecialKeys();
-			map = RemoveSpecialKeys.map;
+			RemoveSpecialKeys rsk = new RemoveSpecialKeys();
+			map = rsk.map;
 			CAPSLOCK = map.get("CAPSLOCK").charAt(0);
 			ENTER = map.get("ENTER").charAt(0);
 			SPACE = map.get("SPACE").charAt(0);
@@ -66,10 +68,17 @@ public class ApplySpecialKeys extends Canonicizer {
 			VOLUME_DOWN = map.get("VOLUME_DOWN").charAt(0);
 		}
 	}
+	
+	public ApplySpecialKeys(boolean applyShifts)
+	{
+		this();
+		this.applyShifts = applyShifts;
+	}
 
 	@Override
 	public String displayName(){
-		return "Apply special keys";
+		return "Apply special keys (" + (applyShifts ? "in" : "ex") + 
+				"cluding shifts)";
 	}
 
 	@Override
@@ -240,7 +249,7 @@ public class ApplySpecialKeys extends Canonicizer {
 			{
 				s = c + "";
 				// shift
-				if (shift)
+				if (shift && applyShifts)
 				{
 					s = switchCase(s);
 					shift = false;

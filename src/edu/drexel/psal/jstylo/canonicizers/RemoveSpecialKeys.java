@@ -12,7 +12,8 @@ public class RemoveSpecialKeys extends Canonicizer {
 
 	protected static String SPECIAL_KEYS_PATH =
 			"edu/drexel/psal/resources/special_keys.txt";
-	protected static SortedMap<String,String> map = null;
+	
+	protected SortedMap<String,String> map = null;
 	
 	/*
 	 * Constructors

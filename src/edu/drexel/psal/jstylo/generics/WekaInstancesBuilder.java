@@ -8,6 +8,7 @@ import weka.core.converters.CSVSaver;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.jgaap.generics.*;
 
@@ -16,6 +17,7 @@ import edu.drexel.psal.jstylo.eventDrivers.LetterCounterEventDriver;
 import edu.drexel.psal.jstylo.eventDrivers.SentenceCounterEventDriver;
 import edu.drexel.psal.jstylo.eventDrivers.SingleNumericEventDriver;
 import edu.drexel.psal.jstylo.eventDrivers.WordCounterEventDriver;
+import edu.drexel.psal.jstylo.generics.Logger.LogOut;
 
 /**
  * The WekaInstancesBuilder class is designed to parse a list of known event sets representing the training corpus
@@ -27,7 +29,12 @@ import edu.drexel.psal.jstylo.eventDrivers.WordCounterEventDriver;
  *
  */
 public class WekaInstancesBuilder {
-
+	
+	/**
+	 * Determines the number of threads to be used for features extraction.
+	 */
+	public int numCalcThreads = 8;
+	
 	/**
 	 * Determines whether to use a set of SparseInstance or Instance.
 	 */
@@ -172,6 +179,41 @@ public class WekaInstancesBuilder {
 	 * ==========
 	 */
 	
+	public static class CalcThread extends Thread {
+		
+		ArrayList<List<EventSet>> list = new ArrayList<List<EventSet>>();
+		int div;
+		int threadId;
+		int knownDocsSize;
+		List<Document> knownDocs;
+		CumulativeFeatureDriver cfd;
+		
+		public ArrayList<List<EventSet>> getList()
+		{
+			return list;
+		}
+		
+		public CalcThread(int div, int threadId, int knownDocsSize, List<Document> knownDocs, CumulativeFeatureDriver cfd)
+		{
+			this.div = div;
+			this.threadId = threadId;
+			this.knownDocsSize = knownDocsSize;
+			this.knownDocs = knownDocs;
+			this.cfd = cfd;
+		}
+		
+		@Override
+		public void run() {
+			for (int i = div * threadId; i < Math.min(knownDocsSize, div * (threadId + 1)); i++)
+				try {
+					list.add(cfd.createEventSets(knownDocs.get(i)));
+				} catch (Exception e) {
+					Logger.logln("Error extracting features!",LogOut.STDERR);
+					Logger.logln(e.getMessage(),LogOut.STDERR);
+				}
+		}
+	}
+	
 	/**
 	 * Prepares the training Weka Instances data: using the given cumulative feature driver, it extracts all features
 	 * from the training documents, builds the corresponding attribute list and saves the data into trainingSet.
@@ -189,10 +231,29 @@ public class WekaInstancesBuilder {
 		
 		// create event sets for known documents
 		known = new ArrayList<List<EventSet>>(knownDocs.size());
-		for (i=0; i<knownDocs.size(); i++){
-			
-			known.add(cfd.createEventSets(knownDocs.get(i)));
-		}
+		int knownDocsSize = knownDocs.size();
+		int div = knownDocsSize / numCalcThreads;
+		CalcThread[] calcThreads = new CalcThread[numCalcThreads];
+		for (int thread = 0; thread < numCalcThreads; thread++)
+			calcThreads[thread] = new CalcThread(
+					div,
+					thread,
+					knownDocsSize,
+					knownDocs,
+					new CumulativeFeatureDriver(cfd));
+		for (int thread = 0; thread < numCalcThreads; thread++)
+			calcThreads[thread].start();
+		for (int thread = 0; thread < numCalcThreads; thread++)
+			calcThreads[thread].join();
+		for (int thread = 0; thread < numCalcThreads; thread++)
+			known.addAll(calcThreads[thread].list);
+		for (int thread = 0; thread < numCalcThreads; thread++)
+			calcThreads[thread] = null;
+		calcThreads = null;
+		
+//		for (i=0; i<knownDocs.size(); i++){
+//			known.add(cfd.createEventSets(knownDocs.get(i)));
+//		}
 
 		// apply event cullers
 		known = CumulativeEventCuller.cull(known, cfd);
@@ -909,6 +970,15 @@ public class WekaInstancesBuilder {
 	 * setters
 	 * =======
 	 */
+	
+	/**
+	 * Sets the number of calculation threads to use for feature extraction.
+	 * @param numCalcThreads number of calculation threads to use.
+	 */
+	public void setNumCalcThreads(int numCalcThreads)
+	{
+		this.numCalcThreads = numCalcThreads;
+	}
 
 	/**
 	 * Sets the Instances representation to sparse if given true, and standard otherwise.
@@ -932,6 +1002,14 @@ public class WekaInstancesBuilder {
 	 * getters
 	 * =======
 	 */
+	
+	/**
+	 * @return the number of calculation threads to use for feature extraction.
+	 */
+	public int getNumCalcThreads()
+	{
+		return numCalcThreads;
+	}
 	
 	/**
 	 * Returns true if the Instances representation is sparse, and false otherwise.
