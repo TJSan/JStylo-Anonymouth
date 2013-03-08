@@ -68,6 +68,13 @@ public class Document extends Parameterizable {
 	 *            The document to be copied
 	 */
 	public Document(Document document) {
+		if (document.text == null){
+			try {
+				document.load();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		this.author = document.author;
 		this.canonicizers = new ArrayList<Canonicizer>(document.canonicizers);
 		this.docType = document.docType;

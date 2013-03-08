@@ -118,8 +118,12 @@ public class CumulativeFeatureDriver {
 		List<EventSet> esl = new ArrayList<EventSet>();
 		for (int i=0; i<features.size(); i++) {
 			EventDriver ed = features.get(i).getUnderlyingEventDriver();
-			Document currDoc = doc instanceof StringDocument ?
-					new StringDocument((StringDocument) doc) : new Document(doc);
+			/*Document currDoc = doc instanceof StringDocument ?
+					new StringDocument((StringDocument) doc) : new Document(doc);*/
+			Document currDoc = new Document(doc);
+			if (doc instanceof StringDocument){
+				currDoc = new StringDocument((StringDocument)doc);
+			}
 			
 			// apply canonicizers
 			try {
@@ -576,11 +580,11 @@ public class CumulativeFeatureDriver {
 	
 	public static void main(String[] args) throws Exception {
 		FeatureWizardDriver.populateAll();
-		CumulativeFeatureDriver cfd = new CumulativeFeatureDriver(new File("feature_sets/example_feature_set.xml").getAbsolutePath());
+		CumulativeFeatureDriver cfd = new CumulativeFeatureDriver(new File("jsan_resources/feature_sets/example_feature_set.xml").getAbsolutePath());
 		cfd = new CumulativeFeatureDriver();
 		FeatureDriver fd = new FeatureDriver("word-lengths", true, new edu.drexel.psal.jstylo.eventDrivers.WordLengthEventDriver());
 		cfd.addFeatureDriver(fd);
-		ProblemSet ps = new ProblemSet("./problem_sets/sample_problem_set.xml");
+		ProblemSet ps = new ProblemSet("jsan_resources/problem_sets/sample_problem_set.xml");
 		WekaInstancesBuilder w = new WekaInstancesBuilder(false);
 		w.prepareTrainingSet(ps.getTrainDocs("aa"), cfd);
 		System.out.println(w.getTrainingSet());
