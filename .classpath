@@ -28,6 +28,6 @@
 	<classpathentry kind="lib" path="lib/external/jaws-bin.jar"/>
 	<classpathentry kind="lib" path="lib/external/ui.jar"/>
 	<classpathentry kind="lib" path="lib/external/Jama-1.0.3.jar"/>
-	<classpathentry kind="lib" path="/Users/Salta/Documents/dist/javalib/kryo-2.21/jars/production/onejar/kryo-2.21-all.jar"/>
+	<classpathentry kind="lib" path="lib/external/kryo-2.21-all.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
