@@ -29,5 +29,6 @@
 	<classpathentry kind="lib" path="lib/external/ui.jar"/>
 	<classpathentry kind="lib" path="lib/external/Jama-1.0.3.jar"/>
 	<classpathentry kind="lib" path="lib/external/kryo-2.21-all.jar"/>
+	<classpathentry kind="lib" path="lib/external/jxl.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

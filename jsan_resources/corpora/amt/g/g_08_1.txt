@@ -4,9 +4,9 @@ fun at the standards instead of trying to comply with them. There is also a hidd
 that is very difficult to decipher, the a large part of the audience is supposed to be expected to
 solve it, or at least enjoy the lexical games.
 
-Step 1, repetitions. The phrases “all-new GLK” is repeated twice, as well as “GLK”
-being repeated an additional time. The word size is repeated twice, as is the phrase “great
-engineering.” The word performance is also used twice. The photo of the car itself seems to
+Step 1, repetitions. The phrases all-new GLK is repeated twice, as well as GLK
+being repeated an additional time. The word size is repeated twice, as is the phrase great
+engineering. The word performance is also used twice. The photo of the car itself seems to
 have only about 3 colors, a silver which varies in lightness, a white in the lights and the
 brightest parts of the silver, and black in the tires and windshield and grill. The text portion is
 only white and black, and the background is a gradient of gray which approximates the overall
@@ -14,7 +14,7 @@ color of the car. The background in the photo, although it is sky, is still silv
 of the bridge and the road.
 Step 2, strands. There are a number of words and phrases associated with power, in a
 very raw way: rugged, off-road, outrunning, powerful, torque, horsepower, V-6 engine, and
-even ‘weightier competition’ and ‘twice its size’ somewhat. Another strand is words
+even weightier competition and twice its size somewhat. Another strand is words
 associated with proof, such as tested, performance, capable, proof, performance, and
 engineering as well as listing four quantitative features of the vehicle. Compact, sleek, and
 fuel-efficient are all traits that are becoming more valuable in the modern world. The
