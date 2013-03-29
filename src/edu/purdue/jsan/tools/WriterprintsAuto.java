@@ -70,7 +70,7 @@ public class WriterprintsAuto {
 	public WriterprintsAuto(String nameOfFolder) {
 		super();
 		initData(nameOfFolder);
-		testOfCorpora();
+		//testOfCorpora();
 		testingFeateres();
 		// readData();
 	}
@@ -85,15 +85,15 @@ public class WriterprintsAuto {
 					return name.endsWith(".xml");
 				}
 			});
-			ExcelWriter test = new ExcelWriter("results2.xls");
+			
 			for(int i=0; i<presetCFDs.size();i++){
 				resArr = new Evaluation[8][names.length/8];
 				cfd = presetCFDs.get(i);
 				for (File file : names) { startProg(file.getName()); }
 				
-				
 				try {
-					test.write(cfd.getName(), i, resArr);
+					ExcelWriter test = new ExcelWriter(cfd.getName());
+					test.write(cfd.getName(), resArr);
 					System.out.println("Please check the result file under "+cfd.getName());
 				} catch (Exception e) {
 					// TODO Auto-generated catch block

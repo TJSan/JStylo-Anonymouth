@@ -47,10 +47,10 @@ public class ExcelWriter {
 		this.workbook = Workbook.createWorkbook(file, wbSettings);
 	}
 
-	public void write(String nameOfSheet, Integer index, Evaluation [][]arr) throws Exception {
+	public void write(String nameOfSheet, Evaluation [][]arr) throws Exception {
 		resArr=arr;
-		workbook.createSheet(nameOfSheet, index);
-		WritableSheet excelSheet = workbook.getSheet(index);
+		workbook.createSheet(nameOfSheet, 0);
+		WritableSheet excelSheet = workbook.getSheet(0);
 		createLabel(excelSheet);
 		createContent(excelSheet);
 		workbook.write();
