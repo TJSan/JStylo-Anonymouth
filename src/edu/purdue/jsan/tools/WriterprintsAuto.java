@@ -92,7 +92,7 @@ public class WriterprintsAuto {
 				for (File file : names) { startProg(file.getName()); }
 				
 				try {
-					ExcelWriter test = new ExcelWriter(cfd.getName());
+					ExcelWriter test = new ExcelWriter(cfd.getName()+".xls");
 					test.write(cfd.getName(), resArr);
 					System.out.println("Please check the result file under "+cfd.getName());
 				} catch (Exception e) {
