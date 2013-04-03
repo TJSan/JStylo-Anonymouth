@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<feature-set name="Prepositions only">
+	<description value="A (partial) set of features used by NLS-Team."/>
+	<feature name="Prepositions" calc_hist="true">
+		<description value="a list of one-word prepositions"/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.ListEventDriver">
+			<param name="sort" value="false"/>
+			<param name="whiteList" value="true"/>
+			<param name="keepLexiconInMem" value="true"/>
+			<param name="underlyingEvents" value="Words"/>
+			<param name="filename" value="edu/purdue/jsan/resources/prepositions.txt"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+			<canonicizer class="edu.drexel.psal.jstylo.canonicizers.StripEdgesPunctuation">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+</feature-set>
