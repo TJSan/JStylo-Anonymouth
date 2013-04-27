@@ -70,14 +70,15 @@ public class WriterprintsAuto {
 	public WriterprintsAuto(String nameOfFolder) {
 		super();
 		initData(nameOfFolder);
-		//testOfCorpora();
+		// testOfCorpora();
 		testingFeateres();
 		// readData();
 	}
 
 	private void testingFeateres() {
-		// writes Evaluation results matrix to new file in excel, iterates through each feature in the xml
-		
+		// writes Evaluation results matrix to new file in excel, iterates
+		// through each feature in the xml
+
 		boolean isDirectory = directory.isDirectory();
 		if (isDirectory) {
 			File[] names = directory.listFiles(new FilenameFilter() {
@@ -85,39 +86,64 @@ public class WriterprintsAuto {
 					return name.endsWith(".xml");
 				}
 			});
-			
-			for(int i=0; i<presetCFDs.size();i++){
-				resArr = new Evaluation[8][names.length/8];
-				cfd = presetCFDs.get(i);
-				for (File file : names) { startProg(file.getName()); }
-				
+			//
+			// for (int i = 0; i < presetCFDs.size(); i++) {
+			// resArr = new Evaluation[8][names.length / 8];
+			// cfd = presetCFDs.get(i);
+			// for (File file : names) {
+			// startProg(file.getName());
+			// }
+			// try {
+			// ExcelWriter test = new ExcelWriter("excel_results/indep/"
+			// + cfd.getName() + ".xls");
+			// test.write(cfd.getName(), resArr);
+			// System.out.println("Please check the result file under "
+			// + cfd.getName());
+			// } catch (Exception e) { // TODO Auto-generated catch block
+			// e.printStackTrace();
+			// }
+			// }
+
+			cfd = presetCFDs.get(0);
+			for (int i = 0; i < 9; i++) {
+				int pos = cfd.addFeatureDriver(presetCFDs.get(1).featureDriverAt(i));
+				resArr = new Evaluation[8][names.length / 8];
+				for (int j = 0; j < 4; j++) {
+					System.out.print(" :" + cfd.featureDriverAt(j).getName());
+				}
+				System.out.println();
+				for (File file : names) {
+					startProg(file.getName());
+				}
 				try {
-					ExcelWriter test = new ExcelWriter(cfd.getName()+".xls");
-					test.write(cfd.getName(), resArr);
-					System.out.println("Please check the result file under "+cfd.getName());
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
+					String name = presetCFDs.get(1).featureDriverAt(i).getName();
+					ExcelWriter test = new ExcelWriter("excel_results/exp2/"+name + cfd.numOfFeatureDrivers()+".xls");
+					test.write(name + cfd.numOfFeatureDrivers(), resArr);
+					System.out.println("Please check the result file under "
+							+ name + cfd.numOfFeatureDrivers());
+				} catch (Exception e) { // TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			}
 
+				cfd.removeFeatureDriverAt(pos);
+			}
 		} else {
 			// It returns false if directory is a file.
 			System.out.println("the name you have entered is a file  : "
 					+ directory);
 			System.out.println("the path is " + directory.getAbsolutePath());
 		}
-		
+
 	}
 
 	private void readData() {
 		Kryo kryo = new Kryo();
 		Input input;
 		try {
-			input = new Input(new FileInputStream(directory.getAbsolutePath()
-					+ "/objects.bin"));
-			resArr = kryo.readObject(input, Evaluation[][].class);
-			// resArr=(Evaluation[][]) kryo.readClassAndObject(input);
+			input = new Input(new FileInputStream(
+					"jsan_resources/our_problem_set/objectsWriterPrints.bin"));
+			// resArr = kryo.readObject(input, Evaluation[][].class);
+			resArr = (Evaluation[][]) kryo.readClassAndObject(input);
 			System.out.println(resArr[1][1].correct());
 
 			input.close();
@@ -137,22 +163,36 @@ public class WriterprintsAuto {
 					return name.endsWith(".xml");
 				}
 			});
-			
-			resArr = new Evaluation[8][names.length/8];
-			for (File file : names) { startProg(file.getName()); }
-			
-			
+			for (int i = 0; i < presetCFDs.size(); i++) {
+				cfd = presetCFDs.get(i);
+				resArr = new Evaluation[8][names.length / 8 + 1];
+				// resArr = new Evaluation[1][12];
+				for (File file : names) {
+					startProg(file.getName());
+				}
+
+				try {
+					ExcelWriter test = new ExcelWriter(cfd.getName() + ".xls");
+					test.write(cfd.getName(), resArr);
+					System.out.println("Please check the result file under "
+							+ cfd.getName());
+				} catch (Exception e) { // TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
 			Logger.logln("Writing array object to "
 					+ directory.getAbsolutePath() + "/objects.bin");
 			Kryo kryo = new Kryo();
 			Output output;
 			try {
-				output = new Output(new FileOutputStream(
-						"jsan_resources/our_problem_set/objectsWriterPrints.bin"));
-				//kryo.writeObject(output, resArr);
-				//resArr[0][0].
+				output = new Output(
+						new FileOutputStream(
+								"jsan_resources/our_problem_set/objectsWriterPrints.bin"));
+				// kryo.writeObject(output, resArr);
+				// resArr[0][0].
 				output.close();
-				
+
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -167,14 +207,16 @@ public class WriterprintsAuto {
 	}
 
 	private void initData(String nameOfFolder) {
-		String[] folderNames = { "Salta", "Lauren", "JiHeyon", "Amy","All","Small" };
-		int index=0;
-		for(int i=0;i<folderNames.length;i++){
-			if(folderNames[i].equals(nameOfFolder))
-				index=i;
+		String[] folderNames = { "Salta", "Lauren", "JiHeyon", "Amy", "All",
+				"Small", "Russian", "all_russian_engl" };
+		int index = 0;
+		for (int i = 0; i < folderNames.length; i++) {
+			if (folderNames[i].equals(nameOfFolder))
+				index = i;
 		}
-		directory = new File("jsan_resources/our_problem_set/" + folderNames[index]);
-		
+		directory = new File("jsan_resources/our_problem_set/"
+				+ folderNames[index]);
+
 		ps = new ProblemSet();
 		ps.setTrainCorpusName(defaultTrainDocsTreeName);
 		DefaultMutableTreeNode top = new DefaultMutableTreeNode(
@@ -217,7 +259,7 @@ public class WriterprintsAuto {
 		}
 
 		// Logger.logln("Preset feature set selected in the features tab.");
-		//cfd = presetCFDs.get(0);
+		// cfd = presetCFDs.get(0);
 		// Logger.logln("loaded preset feature set: " + cfd.getName());
 
 		tmpClassifier = null;
@@ -307,8 +349,9 @@ public class WriterprintsAuto {
 			int num = Integer.parseInt(a[3].substring(0, a[3].length() - 4));
 			int row = (num - 1) % 8;
 			int col = (num - 1) / 8;
+			// int col=Integer.parseInt(a[4].substring(0, a[4].length() - 4))-1;
 			// Logger.logln(">>> Run Analysis thread started.");
-
+			// System.out.println("Column value:"+col);
 			// initialize results tab
 			content = "";
 			boolean classifyTestDocs = false;
@@ -361,7 +404,7 @@ public class WriterprintsAuto {
 
 			// feature extraction
 			// ==================
-			
+
 			// pre-processing
 			if (main.at == AnalyzerTypeEnum.WRITEPRINTS_ANALYZER) {
 				Logger.logln("Applying analyzer feature-extraction pre-processing procedures...");
@@ -375,7 +418,14 @@ public class WriterprintsAuto {
 				content += getTimestamp() + "done!\n\n";
 			}
 			// training set
-			// Logger.logln("Extracting features from training corpus...");
+			// randomize trimming docs
+			int trim_num = numTrainDocs % 10;
+			Logger.logln("Number of trimming docs:" + numTrainDocs % 10);
+			for (int i = 0; i < trim_num; i++) {
+				numTrainDocs = trainingDocs.size();
+				int del_index = (int) (Math.random() * numTrainDocs);
+				trainingDocs.remove(del_index);
+			}
 
 			main.wib.setSparse(true);
 
@@ -385,6 +435,7 @@ public class WriterprintsAuto {
 					+ "using sparse representation)...\n";
 
 			try {
+
 				main.wib.prepareTrainingSet(trainingDocs, main.cfd);
 			} catch (Exception e) {
 				Logger.logln(
@@ -453,7 +504,10 @@ public class WriterprintsAuto {
 				switch (main.at) {
 				case WEKA_ANALYZER:
 					Evaluation eval = (Evaluation) results;
+					System.out.println(row + " " + col + " size:"
+							+ main.resArr.length + " " + main.resArr[0].length);
 					main.resArr[row][col] = (Evaluation) eval;
+					// main.resArr[0][col] = (Evaluation) eval;
 					content += eval.toSummaryString(false) + "\n";
 					try {
 						content += eval.toClassDetailsString() + "\n"
@@ -470,13 +524,13 @@ public class WriterprintsAuto {
 			}
 			// Logger.logln(content);
 			// unlock gui and update results
-			
+
 			main.results.add(content);
 
 			FileWriter fstream;
 			try {
 				fstream = new FileWriter(
-						"jsan_resources/our_problem_set/writerprints_results/"
+						"jsan_resources/our_problem_set/test_res_small/"
 								+ fileName.substring(0, fileName.length() - 4)
 								+ ".txt");
 				BufferedWriter out = new BufferedWriter(fstream);
@@ -486,10 +540,10 @@ public class WriterprintsAuto {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			Logger.logln(">>> Run Analysis thread finished." + row + " " + col
+			Logger.logln(">>> Run Analysis thread finished." + 1 + " " + col
 					+ " incorrect num:" + main.resArr[row][col].incorrect()
 					+ " correct num:" + main.resArr[row][col].correct());
-			
+
 		}
 	}
 }

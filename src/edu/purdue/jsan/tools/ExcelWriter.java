@@ -89,6 +89,12 @@ public class ExcelWriter {
 		addCaption(sheet, 7, 0, "Root mean squared error ");
 		addCaption(sheet, 8, 0, "Relative absolute error ");
 		addCaption(sheet, 9, 0, "Root relative squared error  ");
+		addCaption(sheet, 11, 0, "(Weighted Avg) Tp Rate");
+		addCaption(sheet, 12, 0, "(Weighted Avg) FP Rate");
+		addCaption(sheet, 13, 0, "(Weighted Avg) Precision");
+		addCaption(sheet, 14, 0, "(Weighted Avg) Recall");
+		addCaption(sheet, 15, 0, "(Weighted Avg) F-measure");
+		addCaption(sheet, 16, 0, "(Weighted Avg) ROC Area");
 		
 
 	}
@@ -97,6 +103,8 @@ public class ExcelWriter {
 		for(int row=0;row<resArr.length;row++){
 			for(int col=0;col<resArr[row].length;col++){
 				int rowNum=col*8+(row+1);
+				//if (rowNum>2) break;
+				//int rowNum=col+1;
 				addNumber(sheet, 0, rowNum, (row+1)*5);//Authors quantaty
 				addNumber(sheet, 1, rowNum, rowNum);
 				addLabel(sheet, 2, rowNum, Double.toString(resArr[row][col].numInstances()));
@@ -107,6 +115,13 @@ public class ExcelWriter {
 				addLabel(sheet, 7, rowNum, Double.toString(resArr[row][col].rootMeanSquaredError()));
 				addLabel(sheet, 8, rowNum, Double.toString(resArr[row][col].relativeAbsoluteError()));
 				addLabel(sheet, 9, rowNum, Double.toString(resArr[row][col].rootRelativeSquaredError()));
+				
+				addLabel(sheet, 11, rowNum, Double.toString(resArr[row][col].weightedTruePositiveRate()));
+				addLabel(sheet, 12, rowNum, Double.toString(resArr[row][col].weightedFalsePositiveRate()));
+				addLabel(sheet, 13, rowNum, Double.toString(resArr[row][col].weightedPrecision()));
+				addLabel(sheet, 14, rowNum, Double.toString(resArr[row][col].weightedRecall()));
+				addLabel(sheet, 15, rowNum, Double.toString(resArr[row][col].weightedFMeasure()));
+				addLabel(sheet, 16, rowNum, Double.toString(resArr[row][col].weightedAreaUnderROC()));
 			}
 		}
 		/*

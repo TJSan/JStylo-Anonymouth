@@ -66,7 +66,7 @@ public class XMLGenerator {
 					if(fileName.length()>13) continue;
 					Element document = doc.createElement("document");
 					document.appendChild(doc
-							.createTextNode("jsan_resources/corpora/amt/"
+							.createTextNode("/jsan_resources/corpora/amt/"
 									+ authorName + "/" + fileName));
 					author.appendChild(document);
 
@@ -81,7 +81,7 @@ public class XMLGenerator {
 			DOMSource source = new DOMSource(doc);
 
 			StreamResult result = new StreamResult(new File(mainDir
-					+ folderName + "/author_detect_" + numOfSamples + "_" + num
+					+ folderName + "/russian_eng_transl_" + numOfSamples + "_" + num
 					+ ".xml"));
 			transformer.transform(source, result);
 

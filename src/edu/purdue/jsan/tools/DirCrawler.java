@@ -24,14 +24,14 @@ public class DirCrawler {
 			}
 			XMLGenerator xmlG = new XMLGenerator();
 			int total=0;
-			for(int count=0;count<13;count++){
-			for (int i = 5; i < 45; i += 5) {
+			for(int count=0;count<12;count++){
+			for (int i = 5; i < 10; i += 5) {
 				List<String> sample = pickNRandom(Arrays.asList(names), i);
 				String[] chosen = new String[i];
 				for (int j = 0; j < chosen.length && sample.size() > 0; j++) {
 					chosen[j] = sample.remove(0);
 				}
-				xmlG.generateXML(chosen, folderNames[(total/26)], i);
+				xmlG.generateXML(chosen, folderNames[(total/3)], i);
 				total++;
 
 			}
