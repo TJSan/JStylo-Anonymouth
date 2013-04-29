@@ -1,0 +1,64 @@
+﻿Blagodarja takomu slovarju rech' mozhet idti o sistematizacii ves'ma slozhnyh i
+rasplyvchatyh terminologicheskih i konceptual'nyh sistem gumanitarnyh nauk, o vyjavlenii
+prioritetnyh i perspektivnyh napravlenij issledovanij po ob"ektivnym kriterijam; a takzhe o
+modelirovanii glubinnoj struktury nauchnyh idej i ustanovlenii svjazej mezhdu jetoj strukturoj i
+estestvennym jazykom.
+Inoj podhod k sozdaniju konceptual'nogo slovarja predlagaetsja v rabotah D.G.Lahuti i
+V.Sh. Rubashkina [4].
+Slovarnaja stat'ja (SS) terminologicheskogo (konceptual'nogo) slovarja tezaurusnogo tipa
+daet ischerpyvajushhuju informaciju o termine s prinjatoj v dannom slovare stepen'ju detalizacii
+(semantika termina) i o ego ponjatijnyh svjazjah s drugimi terminami (leksicheskimi edinicami -
+LE) dannoj nauchnoj discipliny, vkljuchennymi v paradigmatiku termina.
+V slovarnuju stat'ju vhodjat kak objazatel'nye (prisutstvujushhie vo vseh stat'jah) jelementy,
+tak i neobjazatel'nye, fakul'tativnye, dajushhiesja tol'ko k nekotorym terminam - v zavisimosti ot
+ih semantiki ili paradigmatiki. Nekotorye fakul'tativnye jelementy vstrechajutsja chashhe, chem
+drugie (javljajas' "pochti objazatel'nymi"), a nekotorye ves'ma redki.
+Nizhe privoditsja polnyj perechen' jelementov terminologicheskoj slovarnoj stat'i. Chast'
+jetih jelementov - fakul'tativnye. Jelementy v perechne raspolozheny v tom porjadke, v kotorom oni
+raspolagajutsja v stat'e. V skobkah privedena abbreviatura dlja dannogo tipa jelementov slovarnoj
+stat'i.
+V kazhdoj stat'e predstavleny sledujushhie - objazatel'nye - jelementy (polja): termin (1), kod
+(2), perevod na anglijskij jazyk (4), definicija (6), associacija (11), kontekst (12). Polnye stat'i,
+t.e. soderzhashhie vse ili pochti vse perechislennye jelementy (zapolneny vse polja stat'i), dajutsja
+dlja bazovyh, fundamental'nyh ponjatij, imejushhih razvetvlennye svjazi vnutri ponjatijnoj
+sistemy dannoj discipliny.
+"Pochti objazatel'nymi" (predstavleny v bol'shinstve statej) javljajutsja jelementy VYShE i
+NIZhE. Odnako u nekotoryh terminov oni otsutstvujut: dlja terminov vysshego urovnja obshhnosti
+nevozmozhno ili necelesoobrazno ukazanie vyshestojashhego termina (SOCIOLOGIJa, LIChNOST'',
+NARODNOE HOZJaJSTVO i t.p.), dlja uzkospecial'nyh, specificheskih terminov - nizhestojashhih
+(TIPOVYE PEREMENNYE DEJSTVIJa, DELOPROIZVODSTVO).
+Vkljuchenie v slovarnuju stat'ju associativnyh terminov, naprotiv, priznano
+objazatel'nym: ono "privjazyvaet" dannyj termin k ponjatijnoj sisteme dannoj discipliny,
+ukazyvaet, hotja by priblizitel'no, na mesto dannogo termina v sisteme (osobenno esli
+otsutstvujut drugie paradigmaticheskie svjazi).
+TERMIN. Objazatel'nyj jelement. V kachestve zaglavnyh jelementov statej iz rjada sinonimov
+vybrany terminy, naibolee shiroko ispol'zuemye (obshheprinjatye) v dannoj discipline,
+predstavlennye v jenciklopedijah, spravochnikah, tezaurusah (deskriptornyh slovarjah)
+avtomatizirovannyh informacionnyh sistem v chastnosti, v bazah dannyh INION RAN i v
+predmetnom kataloge biblioteki INION:
+T ZAShhITA OKRUZhAJuShhEJ SREDY
+S ohrana prirody
+T AKSIOLOGIJa
+S filosofija cennostej
+Mnogie sinonimy na samom dele ne vpolne sovpadajut po znacheniju s zaglavnym terminom i
+imejut specificheskie ottenki smysla, t.e. javljajutsja "kvazisinonimami" (uslovnymi sinonimami).
+Odnako v informacionnyh celjah i s cel'ju sokrashhenija ob"ema slovarja ih dopustimo i
+celesoobrazno rassmatrivat' imenno kak sinonimy: 
+T KREDITNO-FINANSOVAJa SISTEMA
+S kreditnaja sistema
+Termin mozhet soprovozhdat'sja pometoj, ukazyvajushhej na ogranichenie ego znachenija
+primenitel'no k dannoj nauchnoj discipline, naprimer: NATURALIZM (v sociologii).
+KOD. Objazatel'nyj jelement. Kod termina daetsja po trem verhnim urovnjam Rubrikatora
+INION: INTENCIJa 021521 (razdel "Bytie. Materija. Soznanie" Rubrikatora INION po
+filosofii), JeTNOCENTRIZM 044141 (razdel "Jetnicheskie obshhnosti" Rubrikatora INION po
+sociologii). Kazhdyj termin snabzhaetsja kodami ne bolee treh rubrik. Terminy obshhego haraktera
+(verhnego urovnja) imejut tol'ko kod dannoj discipliny (VZAIMOZAVISIMOST'' (JeKON.) 06).
+Uslovnye kody jelementov polezny dlja bolee bystrogo poiska v jelektronnoj versii slovarja
+navigacii po nemu i rjada drugih rabot s jelektronnym slovarem. Kody jelementov, predstavlennyh v
+stat'jah informacionno-poiskovyh tezaurusov (S, V, N, A), sovpadajut s oboznachenijami, prinjatymi
+v tezaurusah.
+JeTIMOLOGIJa. Fakul'tativnyj jelement. Ob"jasnenie proishozhdenija termina s jazykovoj
+tochki zrenija privoditsja tol'ko dlja terminov, vnutrennjaja struktura kotoryh ne ochevidna. Zdes'
+pojasnjaetsja ishodnoe znachenie slova (slov), na baze kotorogo (kotoryh) obrazovan termin:
+T SOCIAL''NAJa STRATIFIKACIJa
+Je Ot lat. stratum - sloj i facio - delaju.

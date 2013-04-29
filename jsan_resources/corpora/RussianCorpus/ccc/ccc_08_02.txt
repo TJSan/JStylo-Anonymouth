@@ -1,0 +1,79 @@
+﻿Prosmotr leksiki v sushhestvennoj mere opiralsja na
+associativnyj, introspektivnyj otbor ontologicheskih svedenij,
+hotja pri rassmotrenii edinic slovnika privlekalsja takzhe
+jenciklopedicheskij spravochnyj material – glavnym obrazom
+material «Sovetskogo jenciklopedicheskogo slovarja» (v dal'nejshem
+SJeS; M., 1987). Dannyj metod issledovanija javljaetsja lish'
+predvaritel'nym; on nacelen na vyjavlenie kak relevantnoj
+leksiki, tak i relevantnogo ontologicheskogo materiala. V
+dal'nejshem metod mozhet byt' podkreplen bolee pristal'nym
+izucheniem struktury materiala spravochnyh izdanij,
+ispol'zovaniem korpusnyh dannyh pri izuchenii kontekstov
+opisyvaemoj leksiki, a takzhe bolee osnovatel'no aprobirovan
+putem sistematizirovannogo vnesenija jenciklopedicheskih opisanij
+v slovar'.
+Prezhde chem perejti k rassmotreniju leksicheskih klassov,
+poprobuem utochnit', kakogo roda informaciju my budem schitat'
+jenciklopedicheskoj (vnelingvisticheskoj, ontologicheskoj). K
+takovoj budem otnosit' informaciju o realii, a takzhe o komplekse
+«slovo-realija»,
+vo-pervyh, vyhodjashhuju za predely prototipicheskogo
+tolkovanija, t.e. nekoj minimal'noj informacii, ob"jasnjajushhej
+znachenie slova ili leksemy (primernye, «usrednennye» varianty
+tolkovanij mozhno pocherpnut' iz tolkovyh slovarej, takih,
+naprimer, kak slovar' S.I.Ozhegova i MAS);
+vo-vtoryh, vyhodjashhuju za ramki opisanija valentnostnoj
+struktury slova, poverhnostno vyrazhajushhejsja predlozhno-
+padezhnymi modeljami upravlenija;
+v-tret'ih, vyhodjashhuju za predely klassicheskih tezaurusnyh
+svjazej VYShE i SINONIM (pri jetom rodovye imena,
+realizujushhie tezaurusnuju svjaz' VYShE, mogut dublirovat'sja v
+tolkovanijah v forme integrirujushhego komponenta, esli tolkovanie
+imeet rodo-vidovuju strukturu);
+v-chetvertyh, vyhodjashhuju za predely ustojchivyh leksicheskih
+svjazej, vyrazhaemyh standartnymi leksicheskimi funkcijami.
+Tak, ne k jenciklopedicheskoj (a k lingvisticheskoj,
+semanticheskoj) informacii budut otneseny svedenija o tom, chto
+velosiped privoditsja v dvizhenie pedaljami, a avgust – vos'moj po
+porjadku mesjac goda; jeti dannye neposredstvenno vhodjat v
+tolkovanija imen. Ne budet otnesena k jenciklopedicheskoj
+informacija o tom, chto nekto mozhet okazat'sja arestovannym - > za
+[prototipicheski plohoj postupok], poskol'ku dlja glagola
+arestovyvat' prichina javljaetsja uchastnikom, vyrazhennym
+predlozhno-padezhnoj konstrukciej. Ne budut schitat'sja jenciklopedicheskimi fakty, chto voda – jeto zhidkost', a
+lingvistika takzhe nazyvaetsja jazykoznaniem (klassicheskie svjazi po
+tezaurusu). Ne budet jenciklopedicheskim znaniem to, chto sil'nyj
+dozhd' chasto nazyvajut prolivnym; takoe znanie opisyvaetsja
+leksicheskoj funkciej. Naprotiv, k jenciklopedicheskim svedenijam
+o nazvannyh realijah mozhno otnesti, naprimer, to, chto u velosipeda
+privod ot dvuh pedalej osushhestvljaetsja cherez cepnuju peredachu
+(SJeS); chto avgust imeet prodolzhitel'nost' 31 den', chto
+arestovannye, kak pravilo, obrashhajutsja za pomoshh'ju k advokatam,
+chto voda – komponent bol'shinstva tehnologicheskih processov
+(SJeS), chto diametr dozhdevyh kapel' – ot 6-7 do 0,5 mm (SJeS), chto v
+drevnosti ser'eznyj vklad v jazykoznanie vnes Aristotel' (dannyj
+fakt takzhe otmechen v SJeS) i t.p. Vopros sostoit v otbore podobnyh
+svedenij dlja konkretnyh leksicheskih edinic i v sposobah
+razmeshhenija ih v formalizovannom slovare.
+Takzhe sleduet otmetit', chto nami ne budet rassmatrivat'sja
+uzkospecial'naja nauchno-tehnicheskaja jenciklopedicheskaja
+informacija, t.e. «slozhnaja» informacija, kotoraja mozhet byt'
+svjazana s oboznachaemymi realijami v predmetnyh oblastjah -
+naprimer, informacija o strukture aminokislot pri opisanii
+edinicy belok ili svedenija po teorii otnositel'nosti pri
+opisanii edinicy vremja. Dlja nas ob"ektom rassmotrenija budut
+svedenija o realijah, harakternye dlja bolee obydennoj, tak
+nazyvaemoj «shkol'noj» kartiny mira. Pri jetom naivnuju kartinu
+mira, voploshhajushhuju neposredstvennoe vosprijatie
+dejstvitel'nosti, my schitaem nedostatochnoj – slovar' nacelen na
+analiz delovoj prozy, kotoraja mozhet soderzhat' opredelennye
+special'nye znanija – tak chto budem orientirovat'sja na nekij
+«srednij» po glubine uroven'.
+Otmetim, krome togo, chto zadacha otbora v slovar' svedenij o
+realii svjazana s obshheinformacionnoj zadachej strukturizacii
+znanij, razvertyvanija «kart» predmetnyh oblastej, sootnoshenija
+tezaurusnyh i inyh struktur dlja predstavlenija informacii.
+Mozhno nadejat'sja, chto razmyshlenija ob jenciklopedicheskom
+«okruzhenii» obshhej leksiki pomogut i strukturizacii predmetnyh
+oblastej; nas, v chastnosti, interesuet struktura takoj predmetnoj
+oblasti, kak komp'juternaja lingvistika.

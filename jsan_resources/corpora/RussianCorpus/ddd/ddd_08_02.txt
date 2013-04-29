@@ -1,0 +1,19 @@
+﻿Vedutsja raboty po analizu tonal'nosti teksta (sentiment-analiz, angl. Sentiment Analysis) dlja avtomatizirovannogo vyjavlenija v tekstah jemocional'no okrashennoj leksiki i jemocional'noj ocenki avtorov po otnosheniju k ob"ektam, rech' o kotoryh idet v tekste (analiz vyskazyvanij, angl. opinion mining) (8). 
+Otmetim, chto izvestnyj sposob frejmovogo analiza ispol'zuetsja dlja analiza semantiki pojeticheskogo teksta. Frejm mozhet predstavljat' tipovuju strukturu nekotorogo sobytija ili situacii. S pomoshh'ju frejma ili ierarhii frejmov predstavljajut takzhe semanticheskie vzaimootnoshenija vnutri teksta ili opisyvajut takie kanonicheskie teksty kak, naprimer, sonet, a takzhe varianty perevodov, kak v sluchae perevodov sonetov Shekspira. Po mneniju E.M. Maslennikovoj (9), ego sonet 91 mozhno predstavit' v vide frejma: kazhdyj X gorditsja Y-kom, a Y prinadlezhit X i specificiruet H. Semanticheskij tip imeni ob"ekta Y opredeljaet normativno-ocenochnoe znachenie dlja H, kotoryj opisyvaetsja i tolkuetsja cherez Y, naprimer, H gorditsja Y-kom®H tshheslaven; H gorditsja Y-kom®H bogat; H gorditsja Y-kom®H 
+Mozhno ispol'zovat' frejmy ne tol'ko dlja analiza variantov perevodov, no i intertekstual'nyh sootvetstvij, poskol'ku s ih pomoshh'ju mozhno predstavit' obshhuju shemu postroenija teksta (shemu smyslovyh opor). 
+Nemalo issledovanij posvjashheny intertekstual'nym svjazjam stihotvorenija A.S. Pushkina «Pamjatnik» (1836), posvjashhennogo, kak izvestno, idee «vechnosti, bessmertija v stihah». V ego osnove lezhit oda Goracija «K Mel'pomene», a takzhe ee perevody M. Lomonosova i G. Derzhavina. Pojetomu k izucheniju intertekstual'nyh sootvetstvij v dannom sluchae mozhno podojti, kak jeto delaetsja v teorii hudozhestvennogo perevoda, na osnove analiza smyslovyh transformacij sootvetstvujushhih tekstov. 
+V svjazi s jetim mozhno vspomnit', chto svoj perevod ody Goracija «K Mel'pomene» Lomonosov vkljuchil v «Kratkoe rukovodstvo k krasnorechiju», § 268. Jetot perevod on ispol'zoval v kachestve primera «nepolnogo sillogizma, ili jentimemy», v kotoroj «polagaetsja odna posylka, potom prisovokupljaetsja prichina i vse zakljuchaetsja sledstviem». 
+Raspolozhenie ody Goracija (i ee perevoda), po slovam Lomonosova, «sostoit v sledujushhej jentimeme: Ja postavil znak bessmertija svoej slavy zatem, chto ja pervyj sochinil v Italii ody, kakie pisal Alcej Eol'skij, togo radi dolzhna moja muza sebja lavrovym venkom uvenchat'». Pechataja svoj perevod, Lomonosov snabdil kazhduju iz treh chastej ody osobym zaglaviem: «Posylka» (stihi 1– 8), «Prichina» (stihi 9–14) i «Sledstvie» (stihi 15–16).
+Ispol'zuja i dopolnjaja jetot analiz, predstavim perevod Lomonosova v vide sledujushhego frejma, podobnogo tomu, kotoryj predlagaetsja v rabote (9) dlja reprezentacii struktury shekspirovskih sonetov:
+Ja sozdal H; H est' takoj Y, kotoryj otlichaetsja svojstvami Z1, Z2 … .Zi, pojetomu R. 
+H – znak; H est' takoj Y – znak bessmertija i budushhej slavy: Ne vovse ja umru; no smert' ostavit / Veliku chast' moju, kak zhizn' skonchaju./ Ja budu vozrastat' povsjudu slavoj, /Poka velikij Rim vladeet svetom. 
+Z1, Z2 ….Zi – svojstva: ja pervyj sochinil v Italii ody, kakie pisal Alcej Eol'skij; 
+pojetomu R; R – Obrashhenie k Muze: dolzhna moja muza sebja lavrovym venkom uvenchat'.
+Jetot frejm mozhno primenit' i dlja predstavlenija struktury «Pamjatnika» Derzhavina: 
+H – pamjatnik; H est' takoj Y – pamjatnik chudesnyj, vechnyj, budushhej slavy:
+Tak! — ves' ja ne umru, no chast' menja bol'shaja, 
+Ot tlena ubezhav, po smerti stanet zhit', 
+I slava vozrastet moja, ne uvjadaja, 
+Dokol' slavjanov rod vselenna budet chtit'. 
+Z1, Z2 ….Zi – svojstva: pervyj ja derznul v zabavnom russkom sloge/O dobrodeteljah Felicy vozglasit',/V serdechnoj prostote besedovat' o Boge/ I istinu carjam s ulybkoj govorit'; 
+pojetomu R; R – Obrashhenie k Muze: Neprinuzhdennoju rukoj netoroplivoj / Chelo tvoe zarej bessmertija venchaj.

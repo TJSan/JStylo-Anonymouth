@@ -1,0 +1,91 @@
+﻿Konechno, ne vse plasty obshhej leksiki podlezhat
+jenciklopedicheskim opisanijam. Perechislim vnachale nekotorye
+otricatel'nye sluchai.
+Naprimer, sredi substantivnoj leksiki takie opisanija edva
+li primenimy dlja obshhih, rodovyh imen («mezhotraslevyh
+omonimov» ili «metaslov») tipa baza, apparat, funkcija, analiz i t.p., esli oni rassmatrivajutsja kak izolirovannye edinicy.
+Konkretnye znachenija oni, kak pravilo, priobretajut v sostave
+terminologicheskih sochetanij v predmetnyh oblastjah (baza
+dannyh, letatel'nyj apparat, ravnomerno nepreryvnaja funkcija,
+matematicheskij analiz i t.p.), i uzhe v oblastjah, a ne v obshhem
+slovare mogut soprovozhdat'sja podrobnymi opisanijami, v kotoryh
+jenciklopedicheskaja sostavljajushhaja, vozmozhno, budet prevalirovat'
+nad lingvisticheskoj.
+Vrjad li celesoobrazno jenciklopedicheskoe opisanie
+naimenovanij sushhnostej iz sfery vosprijatija: vidimyh,
+slyshimyh, oshhushhaemyh javlenij: temnota, tresk, privkus i dr.;
+naimenovanij sub"ektivno oshhushhaemyh jemocij: radost', jarost' i
+dr.; takogo roda sushhnosti iznachal'no svjazany ne s ob"ektivnym
+nauchnym ili prakticheskim znaniem, kotoroe oformljaetsja i
+klassificiruetsja kak jenciklopedicheskaja informacija, a s
+trudnoob"ektiviziruemym mirom sub"ekta vosprijatija.
+Jenciklopedicheskie opisanija, po-vidimomu, maloverojatny
+dlja rjada predstavitelej odushevlennoj naricatel'noj leksiki, v
+tom chisle dlja imen otnoshenij: zemljak, avtor, vrag i dr. (hotja
+polnost'ju iskljuchit' bytijnyh znanij nel'zja; naprimer, mozhno
+privesti nekotorye svedenija po avtorskomu pravu, nekotorye
+svedenija iz jeticheskoj sfery i t.p.). Dlja nazvanij professij (chasto
+javljajushhihsja slovarnymi derivatami ot glagolov professional'noj
+dejatel'nosti) jenciklopedicheskaja sostavljajushhaja (ukazanie
+osobennostej professij) mozhet pripisyvat'sja rodstvennomu
+neodushevlennomu nazvaniju dejatel'nosti - naprimer, ne imeni
+svarshhik, a imeni svarka ili glagolu svarivat' (esli zhe imja
+dejatelja ne javljaetsja proizvodnym ot imeni dejatel'nosti, naprimer,
+bukinist, to prisvoenie jenciklopedicheskoj informacii emu
+vozmozhno).	
+Vrjad li podlezhat jenciklopedicheskim rasshirenijam nazvanija
+nacional'nostej i zhitelej stran, kotorye vstrechajutsja v
+rassmatrivaemom slovnike (francuz, bolgarin i dr.); poskol'ku, po
+suti, takie imena otnosjatsja k otraslevoj, geograficheskoj leksike,
+i lingvostranovedcheskie svedenija, svjazannye s obrazovavshimi jeti
+imena toponimami, umestny v geograficheskom, a ne v
+obshheleksicheskom slovare.
+Opredelennoe kolichestvo leksiki osvobozhdaetsja ot
+jenciklopedicheskih opisanij zaschet togo, chto chast' informacii o
+realijah ob"emletsja valentnostjami slova. Naprimer, dlja rjada imen
+dejatelej mozhno vydelit' jenciklopedicheskij priznak
+«vozmozhnost' bolee uzkoj specializacii», i jetot priznak v tekste
+mozhet realizovyvat'sja v vide uchastnika, vyrazhaemogo model'ju upravlenija: sledovatel' -> po osobo vazhnym delam; artist ->
+original'nogo zhanra i dr. (Privedem dlja sravnenija imena,
+formal'no ne imejushhie dannoj valentnosti, no po ontologicheskim
+svojstvam dopuskajushhie specializaciju: rabochij, arhitektor i
+dr.; specializacija u nih mozhet, naprimer, vyrazhat'sja
+kompozitami: rabochij-slesar', arhitektor-restavrator i t.p.; dlja
+takih imen vozmozhnost' specializacii mozhet byt' otrazhena v
+jenciklopedicheskoj zone).
+Teper' perejdem k rassmotreniju leksicheskih klassov, dlja
+kotoryh opredelennye tipy jenciklopedicheskoj informacii,
+naoborot, vyjavljajutsja. Budem govorit' o leksike substantivnoj,
+kotoraja v naibol'shej stepeni podverzhena jenciklopedicheskim
+opisanijam v slovarjah.
+Nekotoryj uzhe nakoplennyj opyt vedenija
+jenciklopedicheskoj zony pokazyvaet, chto naibolee reguljarnym
+tipom jenciklopedicheskoj informacii dlja imen sluzhit
+informacija o parametrah (harakteristikah, priznakah, svojstvah),
+po kotorym prototipicheski harakterizuetsja oboznachaemaja
+sushhnost'; sootvetstvenno, naibolee massovoj formoj vyrazhenija
+ontologicheskoj informacii v RUSLANe sluzhit
+jenciklopedicheskaja funkcija Param, vvodjashhaja v opisanija
+parametry; sredi nih kolichestvennye («vysota», «emkost'» i t.p.)
+i nekolichestvennye («forma», «cvet», «material» i t.p.).
+Funkcija Param udobna dlja svoego roda anketirovanija leksiki
+na predmet vyjavlenija aktual'nyh bytijnyh svojstv referentov [1,
+3]. Ona kak by «prizyvaet» leksikografa ischislit' i sobrat'
+voedino raznoobraznye myslimye svojstva oboznachaemoj
+sushhnosti.
+V samom dele, perechen' harakternyh svojstv (X obladaet
+svojstvami Y1, Y2,…,Yn) sostavljaet odin iz fundamental'nyh
+tipov deklarativnoj informacii o realii, narjadu s otneseniem k
+rodovomu ponjatiju (X est' Z) i ischisleniem raznovidnostej (X
+podrazdeljaetsja na W1, W2, …, Wm). Pri jetom vtoraja i tret'ja
+formy, voobshhe govorja, mogut dublirovat'sja v tradicionnyh
+lingvisticheskih opisanijah: vtoraja forma, po suti, dubliruetsja v
+tolkovanii, kotoroe v bol'shinstve sluchaev imeet rodo-vidovuju
+strukturu, a tret'ja mozhet libo neposredstvenno dublirovat'sja v
+tezauruse (esli tam ukazyvajutsja nizhestojashhie ponjatija), libo
+dublirovat'sja v inversnyh tolkovanijah raznovidnostej (esli X
+podrazdeljaetsja na W1, W2, …, Wm, to W1 est' X, W2 est' X, …,
+Wm est' X). Dlja pervoj formy (perechnja svojstv) prototipicheski
+tol'ko nekoe bazovoe, vydelennoe svojstvo (uslovno Y1) vojdet v
+tolkovanie (kak differencirujushhij komponent pri rodo-vidovom predstavlenii), a ostal'nye svojstva (Y2, …, Yn) kak raz i sostavjat
+soderzhanie jenciklopedicheskoj informacii.

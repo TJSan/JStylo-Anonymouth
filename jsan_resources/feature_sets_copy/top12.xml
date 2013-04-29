@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<feature-set name="Top 9">
+	<description value="A (partial) set of top 12 features used by NLS-Team."/>
+	<feature name="Top Letter bigrams" calc_hist="true">
+		<description value="Most common letter bigrams (e.g. aa, ab etc.), case insensitive. Bigrams are taken only within words (do not cross adjacent words)."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.LetterNGramEventDriver">
+			<param name="N" value="2"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="Words" calc_hist="true">
+		<description value="Frequencies of various words in the text, case insensitive and without punctuations."/>
+		<event-driver class="com.jgaap.eventDrivers.NaiveWordEventDriver">
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+			<canonicizer class="edu.drexel.psal.jstylo.canonicizers.StripEdgesPunctuation">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+		<feature name="Pronouns" calc_hist="true">
+		<description value="a list of pronouns"/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.ListEventDriver">
+			<param name="sort" value="false"/>
+			<param name="whiteList" value="true"/>
+			<param name="keepLexiconInMem" value="true"/>
+			<param name="underlyingEvents" value="Words"/>
+			<param name="filename" value="edu/purdue/jsan/resources/pronouns.txt"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+			<canonicizer class="edu.drexel.psal.jstylo.canonicizers.StripEdgesPunctuation">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="Word Lengths" calc_hist="true">
+		<description value="Frequency of words of different lengths (excluding punctuation)."/>
+		<event-driver class="com.jgaap.eventDrivers.WordLengthEventDriver">
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="edu.drexel.psal.jstylo.canonicizers.StripEdgesPunctuation">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="Conjunctions" calc_hist="true">
+		<description value="a partail list of one-word conjunctions"/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.ListEventDriver">
+			<param name="sort" value="false"/>
+			<param name="whiteList" value="true"/>
+			<param name="keepLexiconInMem" value="true"/>
+			<param name="underlyingEvents" value="Words"/>
+			<param name="filename" value="edu/purdue/jsan/resources/conjunctions.txt"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+			<canonicizer class="edu.drexel.psal.jstylo.canonicizers.StripEdgesPunctuation">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="Prepositions" calc_hist="true">
+		<description value="a list of one-word prepositions"/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.ListEventDriver">
+			<param name="sort" value="false"/>
+			<param name="whiteList" value="true"/>
+			<param name="keepLexiconInMem" value="true"/>
+			<param name="underlyingEvents" value="Words"/>
+			<param name="filename" value="edu/purdue/jsan/resources/prepositions.txt"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+			<canonicizer class="edu.drexel.psal.jstylo.canonicizers.StripEdgesPunctuation">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="POS Tags" calc_hist="true">
+		<description value="Part-Of-Speech tags extracted by the Stanford POS Maxent Tagger."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.MaxentPOSTagsEventDriver">
+		</event-driver>
+		<canonicizers>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="Letters" calc_hist="true">
+		<description value="Frequency of letters (a-z, case insensitive)."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.LetterNGramEventDriver">
+			<param name="N" value="1"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="POS Trigrams" calc_hist="true">
+		<description value="Part-Of-Speech tag trigrams extracted by the Stanford POS Maxent Tagger."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.MaxentPOSNGramsEventDriver">
+			<param name="N" value="3"/>
+		</event-driver>
+		<canonicizers>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+</feature-set>

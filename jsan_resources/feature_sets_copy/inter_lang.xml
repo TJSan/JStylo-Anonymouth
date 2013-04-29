@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<feature-set name="Best inter language features">
+	<description value="A (partial) set of features used by NLS-Team."/>
+	<feature name="Top Letter bigrams" calc_hist="true">
+		<description value="Most common letter bigrams (e.g. aa, ab etc.), case insensitive. Bigrams are taken only within words (do not cross adjacent words)."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.LetterNGramEventDriver">
+			<param name="N" value="2"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="Top Letter trigrams" calc_hist="true">
+		<description value="Most common letter trigrams (e.g. aaa, aab etc.), case insensitive. Trigrams are taken only within words (do not cross adjacent words)."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.LetterNGramEventDriver">
+			<param name="N" value="3"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="Words" calc_hist="true">
+		<description value="Frequencies of various words in the text, case insensitive and without punctuations."/>
+		<event-driver class="com.jgaap.eventDrivers.NaiveWordEventDriver">
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+			<canonicizer class="edu.drexel.psal.jstylo.canonicizers.StripEdgesPunctuation">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="Word Lengths" calc_hist="true">
+		<description value="Frequency of words of different lengths (excluding punctuation)."/>
+		<event-driver class="com.jgaap.eventDrivers.WordLengthEventDriver">
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="edu.drexel.psal.jstylo.canonicizers.StripEdgesPunctuation">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+</feature-set>

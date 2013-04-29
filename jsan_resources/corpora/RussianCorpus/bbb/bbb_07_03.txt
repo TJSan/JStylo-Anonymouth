@@ -1,0 +1,28 @@
+﻿Esli jelementam gipergrafa pripisany simvoly (ili cepochki simvolov) iz nekotorogo mnozhestva, to on javljaetsja raskrashennym gipergrafom ili gipergrafom s pomechennymi vershinami i rebrami. Cepochki simvolov – jeto imena ponjatij i otnoshenij ontologii, predstavlennoj raskrashennym, chastichno orientirovannym gipergrafom. Takoj gipergraf budem nazyvat' semanticheskim gipergrafom.
+Segodnja v teorii prinjato klassificirovat' ontologii po stepeni zavisimosti ot zadach ili
+prikladnoj oblasti, po jazyku predstavlenija ontologicheskih znanij i ego vyrazitel'nym
+vozmozhnostjam i drugim parametram [6]. Prikladnye ontologii opisyvajut koncepty, kotorye
+zavisjat kak ot ontologii zadach, tak i ot ontologii predmetnoj oblasti. Ontologicheskij inzhiniring
+pri jetom podrazumevaet: opredelenie klassov ponjatij v ontologii; navedenie taksonomii na klassah; razrabotku struktur ponjatij i situacij; opredelenie svojstv ponjatij i znachenij jetih
+svojstv; procedury vyvoda i preobrazovanija situacij.
+Prikladnaja ontologija «Planimetrija» razrabatyvaetsja na osnove obshhih principov postroenija
+ontologij, no s uchetom ispol'zovanija v kachestve jazyka predstavlenija znanij semanticheskih
+gipergrafov. Dannyj formalizm pozvoljat opredelit' ontologiju v vide semanticheskogo gipergrafa:
+O (X, R, I), (1)
+gde X – mnozhestvo ponjatij problemnoj sredy (vershiny gipergrafa), R – mnozhestvo otnoshenij
+mezhdu ponjatijami (dugi i rebra gipergrafa), a I – mnozhestvo imen ponjatij i otnoshenij v dannoj
+predmetnoj oblasti.
+Na semanticheskom gipergrafe (takzhe kak i na semanticheskoj seti) mozhno predstavljat' i rezul'taty arifmeticheskih, logicheskih i drugih operacij, pojetomu v ontologii mozhno vvodit' sootvetstvujushhie vershiny (naprimer, Raznost', Summa, a takzhe formuly podscheta perimetra, ploshhadi i t.p.). Konechno, interpretacija podobnyh vershin vmeste s sootvetstvujushhimi otnoshenijami budet otlichat'sja ot interpretacii drugih vershin. Sleduet otmetit', chto mnozhestvo ponjatij X javljaetsja otkrytym – ego mozhno rasshirjat' po mere neobhodimosti.
+Klass Ploskaja Figura, ohvatyvajushhij vse planimetricheskie figury, imeet podklassy, kotorye predstavljajut bolee konkretnye ponjatija, chem nadklass. Kazhdyj podklass mozhet imet' svoi podklassy. Naprimer, klass Treugol'nik razdeljaetsja na podklassy Prjamougol'nyj i Ravnobedrennyj Treugol'nik. A Ravnostoronnij Treugol'nik javljaetsja podklassom klassa Ravnobedrennyj Treugol'nik.
+Otnoshenija mezhdu klassami, podklassami i nadklassami ponjatij organizujutsja v vide taksonomii ili taksonomicheskoj ierarhii. Dlja predstavlenija taksonomii ispol'zuetsja otnoshenie javljaetsja_vidom (AKindOf). Taksonomicheskij fragment ontologii, predstavljajushhij soboj 2-odnorodnyj orientirovannyj gipergraf, predstavlen na ris. 1.
+Pri razrabotke i pri ispol'zovanii ljuboj ontologii neobhodimo opredelit'sja s perechnem ispol'zuemyh otnoshenij. Na segodnjashnij den' net obshheprinjatogo polnogo perechnja otnoshenij za iskljucheniem desjatka obshheznachimyh otnoshenij (naprimer, A_Kind_Of, part_of, have_value, have_structure i dr.). Tem ne menee, vsju sovokupnost' otnoshenij v ontologii stoit razdelit' na neskol'ko podmnozhestv:
+gde R1 – obshheznachimye otnoshenija (sm. vyshe), R2 – arifmeticheskie, R3 – logicheskie (I, ILI, NE i dr.) i t.d. i Rk – predmetnye dlja dannogo prilozhenija otnoshenija. Obshheznachimye otnoshenija) nosjat v osnovnom deklarativnyj harakter: oni sluzhat dlja nahozhdenija putej poiska trebuemyh znanij. Arifmeticheskie, logicheskie, funkcional'nye i predmetnye otnoshenija zadajutsja kak deklarativno, tak i operacional'no. Poslednee oznachaet, chto s imenem dannogo otnoshenija svjazana sootvetstvujushhaja procedura, s pomoshh'ju kotoroj osushhestvljaetsja interpretacija vyskazyvanija v real'noj ili «virtual'noj» srede. Naprimer, otnoshenie soprikasaetsja_v_koncevoj_tochke predpolagaet, chto sushhestvuet procedura, s pomoshh'ju kotoroj na vhodnom izobrazhenii osushhestvljaetsja poisk dvuh otrezkov prjamyh, soprikasajushhihsja drug s drugom koncevymi tochkami. K predmetnym otnoshenijam ontologii «Planimetrija» takzhe otnosjatsja otnoshenija: obrazuet, parallel'no, perpendikuljarno, vychisljaetsja_po_formule, sovpadaet, delit_popolam, ishodit_iz, javljaetsja_vnutrennej_tochkoj i t.d. Otmetim, chto mnozhestvo R javljaetsja otkrytym – v nego mozhno dobavljat' neobhodimye podmnozhestva.
+Imena ponjatij i otnoshenij ontologii vybirajutsja na osnove terminologii, sootvetstvujushhej
+estestvenno-jazykovym realijam v dannoj oblasti, chtoby uprostit' process razrabotki ontologii dlja
+jeksperta i inzhenera po znanijam. No i zdes' process kodifikacii dalek ot zavershenija, pojetomu
+kazhdyj razrabotchik predmetnoj ontologii po vozmozhnosti ispol'zuet obshheprinjatuju
+terminologiju (v osnovnom dlja imen ponjatij) i sobstvennye predpochtenija – dlja imen otnoshenij. V
+planimetrii sushhestvuet ustojavshajasja terminologija dlja oboznachenija ponjatij (eshhe so vremen
+Drevnej Grecii). I ponjatija oboznachajutsja cepochkami simvolov ochen' pohozhimi na slova
+estestvennogo jazyka, naprimer, libo anglijskogo, libo russkogo. S naimenovaniem otnoshenij –
+vopros slozhnee, pojetomu i raznoboja bol'she.

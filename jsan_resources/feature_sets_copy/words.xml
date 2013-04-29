@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<feature-set name="Best five features">
+	<feature name="Prepositions" calc_hist="true">
+		<description value="a list of one-word prepositions"/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.ListEventDriver">
+			<param name="sort" value="false"/>
+			<param name="whiteList" value="true"/>
+			<param name="keepLexiconInMem" value="true"/>
+			<param name="underlyingEvents" value="Words"/>
+			<param name="filename" value="edu/purdue/jsan/resources/prepositions.txt"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+			<canonicizer class="edu.drexel.psal.jstylo.canonicizers.StripEdgesPunctuation">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="POS Tags" calc_hist="true">
+		<description value="Part-Of-Speech tags extracted by the Stanford POS Maxent Tagger."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.MaxentPOSTagsEventDriver">
+		</event-driver>
+		<canonicizers>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="Letters" calc_hist="true">
+		<description value="Frequency of letters (a-z, case insensitive)."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.LetterNGramEventDriver">
+			<param name="N" value="1"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="POS Trigrams" calc_hist="true">
+		<description value="Part-Of-Speech tag trigrams extracted by the Stanford POS Maxent Tagger."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.MaxentPOSNGramsEventDriver">
+			<param name="N" value="3"/>
+		</event-driver>
+		<canonicizers>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+</feature-set>

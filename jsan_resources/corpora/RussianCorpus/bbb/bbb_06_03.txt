@@ -1,0 +1,46 @@
+﻿V dannoj rabote rassmatrivaetsja gipergrafovyj jazyk predstavlenija prikladnoj ontologii. Prikladnaja ontologija rassmatrivaetsja v kachestve edinogo konceptual'nogo interfejsa mezhdu podsistemami integral'noj sistemy iskusstvennogo intellekta. 
+V poslednee vremja v iskusstvennom intellekte nametilas' tendencija integrirovanija razlichnyh
+podsistem v edinuju sistemu. Dlja jetogo priduman termin Artificial General Intelligence, chto mozhno
+bylo by perevesti kak Integral'nyj Iskusstvennyj Intellekt (III). V 2008 godu byla provedena
+v Memfise (SShA) pervaja mezhdunarodnaja konferencija po jetoj tematike [1], v 2009 – namechena
+vtoraja.
+V ramkah analogichnogo proekta predpolagaetsja integracija v III raznomodal'nyh sistem
+sensornogo, motornogo i mental'nogo haraktera [2]. Na pervom jetape - podsistem analiza i sinteza
+izobrazhenij, analiza i sinteza estestvennogo jazyka i podsistemy reshenija zadach s dal'nejshim
+rasshireniem funkcij analiza i sinteza rechi, otvetov na voprosy, ob"jasnenij sobstvennogo
+povedenija, obuchenija i samoobuchenija i t.d.
+Sovershenno ochevidno, chto integracija raznomodal'nyh sistem dolzhna osushhestvljat'sja pri
+nalichii edinogo konceptual'nogo interfejsa mezhdu nimi. V kachestve takogo interfejsa
+predlagaetsja ontologija – konceptual'naja «model' mira», v kotoroj «rabotaet» III. V jetom sluchae
+nekotorye iz podsistem neobhodimo «dovodit'» do konceptual'nogo urovnja, poskol'ku stepen'
+takoj prorabotki u podsistem na segodnjashnij den' razlichna.
+Esli v kachestve edinogo interfejsa beretsja ontologija, to voznikaet dva voprosa. Vybor jazyka
+predstavlenija ontologicheskih znanij, chtoby on v dal'nejshem pozvolil «pogruzhat'» v nego
+trebuemye rasshirenija, naprimer, nechetkie znanija, poznavatel'nye procedury i t.d. Vtoroj vopros
+otnositsja k razrabotke prikladnoj ontologii obshhej dlja podsistem, sposobnoj na konceptual'nom
+urovne integrirovat' raznomodal'nye vhody i vyhody III. Pri jetom, konechno, predpolagaetsja, chto
+«vnutri» kazhdoj podsistemy mogut byt' svoi jazyki predstavlenija i svoi bazy «vnutrennih»
+znanij. Naprimer, dlja zritel'noj sistemy analiza izobrazhenij sushhestvuet svoja baza dlja vydelenija
+«neproizvodnyh» priznakov; dlja sistemy analiza teksta – svoja dlja morfologii i sintaksisa
+estestvennogo jazyka.
+V dannoj rabote rassmatrivaetsja gipergrafovyj jazyk predstavlenija konceptual'nyh znanij i
+prikladnaja ontologija «Planimetrija». Ontologija «Planimetrija» vybrana iz-za vozmozhnosti otrabatyvat' na nej zritel'noe vosprijatie, sintez zritel'nyh ob"ektov, analiz i sintez tekstov, a
+takzhe planirovanie reshenija planimetricheskih zadach. V dal'nejshem pri nalichii jadra jetoj
+prikladnoj ontologii mozhno narashhivat' jetu sistemu blokami «otvetov na voprosy», «ob"jasnenija»
+i privlekat' poznavatel'nye procedury (indukciju, analogiju i dr.), a takzhe stavit' zadachu
+obuchenija i samoobuchenija kak razvitie izvestnyh metodov, priblizhajas' k «chelovecheskomu»
+obucheniju. Nalichie voobrazhenija pozvoljaet jekstrapolirovat' dannuju ontologiju do prakticheski
+znachimyh modelej znanij, gde kompleksno reshaetsja bolee shirokij perechen' intellektual'nyh
+zadach.
+Dlja raznyh predmetnyh oblastej i dlja raznyh zadach sushhestvuet spektr jazykov (modelej)
+predstavlenija znanij. Obzory nekotoryh iz nih dany v [3]. Na nash vzgljad dlja sistemy III,
+oharakterizovannoj vyshe, naibolee adekvatnym jazykom predstavlenija znanij javljaetsja jazyk
+gipergrafov v kachestve rasshirenija semanticheskih setej.
+V obshhem sluchae gipergraf mozhno zadat' razlichnymi sposobami. Opredelim gipergraf soglasno
+[4, 5]. Gipergraf H (V, E) est' para, gde V – mnozhestvo vershin V = {vi}, i  I= {1, 2,…, n}, a E –
+mnozhestvo reber E = {ej}, j  J= {1, 2,..., m}; kazhdoe rebro predstavljaet soboj podmnozhestvo V.
+Vershina v i rebro e nazyvajutsja incidentnymi, esli v  e. Dlja v  V cherez d(v) oboznachaetsja chislo
+reber, incidentnyh vershine v; d(v) nazyvaetsja stepen'ju vershiny v. Stepen' rebra e – chislo
+vershin incidentnyh jetomu rebru, - oboznachaetsja cherez r(e). Gipergraf N javljaetsja r-odnorodnym,
+esli vse ego rebra imejut odinakovuju stepen' r. Esli kazhdoe ego rebro imeet stepen' ravnuju 2, to
+gipergraf javljaetsja grafom.

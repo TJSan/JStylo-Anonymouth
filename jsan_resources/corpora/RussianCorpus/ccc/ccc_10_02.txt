@@ -1,0 +1,76 @@
+﻿Pri prosmotre slovarja mozhno nazvat' nekotorye leksicheskie
+klassy, chlenam kotoryh prisushh primerno odinakovyj nabor
+parametrov. V slovare parametry mogut pripisyvat'sja kazhdomu
+slovu otdel'no (kak jeto realizuetsja v RUSLANe v nastojashhee
+vremja), a mogut takzhe pripisyvat'sja klassu; tem samym mozhet byt'
+zadana svoego roda «jenciklopedicheskaja» grammatika.
+Tak, sredi predmetnyh sushhnostej, rezervuary
+harakterizujutsja emkost'ju, formoj, materialom: JeNC (kanistra) =
+{Param (emkost'); Param (forma); Param (material)}. (Ochevidno,
+chto takoe opisanie pri semanticheskom analize teksta pomozhet
+interpretirovat' fragmenty tipa ploskaja / plastmassovaja/
+pjatilitrovaja kanistra).
+Dlja vnutrennih pomeshhenij (komnata, koridor i dr.)
+aktual'ny parametry ploshhad', forma, vysota potolka,
+raspolozhenie okon, osveshhennost' i, byt' mozhet, eshhe nekotorye
+drugie. V tekste jeti parametry mogut vyrazhat'sja, naprimer,
+fragmentami: nizkij / dlinnyj / temnyj koridor; prostornaja /
+solnechnaja komnata i t.p.
+Dlja predmetov dekorativnogo naznachenija (abazhur, braslet i
+dr.) sushhestvenny razmer, cvet, forma, material izgotovlenija
+(ploskij belyj abazhur, zolotoj braslet i t.p.).
+Dlja predmetov odezhdy i obuvi vazhny parametry razmer,
+fason, material (v tom chisle vid tkani, kozhi, volokna): tufli na
+vysokom kabluke, zamshevye sapogi, botinki 45-go razmera, sherstjanaja bluza i t.p.
+Dlja stroenij aktual'ny vysota, jetazhnost', forma, cvet,
+material (trehjetazhnyj osobnjak; vysokij kirpichnyj dom i t.p.).
+Konechno, ob"ektam, v principe otnosjashhimsja k klassam, takzhe
+prisushhi individual'nye sochetanija svojstv; tak referent leksemy
+almaz 2 (v znachenii «ukrashenie»), v otlichie ot drugih ukrashenij,
+ne nuzhdaetsja v harakterizacii po priznaku «material» (material,
+ochevidno, vhodit v tolkovanie), no harakterizuetsja po priznaku
+«cennost'».
+Sredi drugih klassov, «podverzhennyh» harakterizacii s
+pomoshh'ju parametrov, mozhno nazvat', naprimer, plodovo-jagodnye
+rastenija (aktual'ny areal kul'tivirovanija, sroki sozrevanija
+plodov, soderzhanie poleznyh veshhestv i dr. parametry);
+stroitel'nye materialy (aktual'ny sostav, prochnost', sfera
+primenenija i dr.); informacionnye produkty (sushhestvenny ob"em,
+avtorstvo i dr.). Spisok legko mozhet byt' prodolzhen; parametricheskij put' opisanija ob"ektov dejstvitel'no pokazyvaet
+sebja produktivnym.
+Zhelatel'no, chtoby ischislenie svojstv opiralos' ne tol'ko
+na introspekciju, no i na statisticheskie, korpusnye dannye.
+Naprimer, material NKRJa pokazyvaet, chto dlja sushhnosti <komnata>
+krome nazvannyh vyshe parametrov vnutrennih pomeshhenij
+statisticheski znachimo takzhe ukazanie obitatelej: moja/tvoja i t.p.
+komnata (znachimo po korpusu takzhe ukazanie naznachenija komnaty,
+no ono vyrazhaetsja lingvisticheski, s pomoshh'ju modeli upravlenija:
+komnata –> dlja otdyha).
+Otmetim, chto na aktual'nost' togo ili inogo parametra
+sposobna prolivat' svet opredelitel'naja konstrukcija s
+kolichestvennym prilagatel'nym. Kak, naprimer, pokazat', chto
+vysota dlja potolka bolee «jenciklopedichna», nezheli gromkost' dlja
+treska? Jeto mozhno sdelat', obrativshis' k korpusu, v kotorom
+imeetsja mnozhestvo vhozhdenij konstrukcii N-metrovyj potolok
+(chetyrehmetrovyj, pjatimetrovyj, …) i nesopostavimo men'she
+sluchaev vhozhdenija sochetanija N-decibel'nyj tresk (tak, v Jandekse
+v mae 2010g. na desjatki tysjach stranic, gde vstretilos' sochetanie
+N-metrovyj potolok prishlos' ne bolee 500 stranic, gde est'
+sochetanie N-decibel'nyj tresk).
+Formal'no ukazanie naimenovanij tipovyh parametrov s
+pomoshh'ju funkcii Param chasto umeshhaetsja v ramkah prostanovki
+poleznyh dlja interpretacii teksta leksicheskih svjazej, tipa svjazi
+botinki – > razmer: JeNC (botinki) = Param (razmer). No za jeti
+ramki mozhet byt' sovershen vyhod, esli, naprimer, ukazyvat' ne
+tol'ko naimenovanija parametrov, no i ih znachenija, aktual'nye dlja
+predstavljaemyh v slovare realij. Tak, pri opisanii imen mesjacev
+mozhno soobshhat' ih prodolzhitel'nost' v dnjah: JeNC = {Param
+(sentjabr') = prodolzhitel'nost'; prodolzhitel'nost' (sentjabr') =
+(«tochno», 30, «den'»)}; dlja imeni fizicheskogo javlenija svet mozhno
+ukazat' znachenie skorosti: JeNC (svet) = {Param (skorost');
+skorost' (svet) = («priblizitel'no», 3*10**8, «metr/sekunda»)} i
+t.p. Znachenija parametrov mozhno razdeljat' na postojannye (dlja
+opisyvaemoj sushhnosti) i na peremennye; dlja peremennyh mozhno
+ukazyvat' oblast' dopustimyh znachenij: JeNC (dozhd') = { Sing
+(kaplja); Param (kaplja) = diametr; diametr (kaplja) = («ot-do», 0.5, 7
+«millimetr»)}.

@@ -1,0 +1,77 @@
+﻿PEREVOD na anglijskij jazyk. Objazatel'nyj jelement. Zdes' nuzhno imet' v vidu, chto
+mnogie russkie terminy sovremennoj jekonomiki, filosofii, sociologii v dejstvitel'nosti
+javljajutsja perevodom (kal'koj) sootvetstvujushhih anglijskih (anglojazychnyh) terminov; pojetomu
+fakticheski "perevodom" neredko okazyvaetsja russkij termin. Neskol'ko perevodov odnogo
+russkogo termina dajutsja v dvuh sluchajah: esli vse oni dostatochno rasprostraneny v literature i
+esli nevozmozhno podobrat' odin otnositel'no tochnyj jekvivalent:
+T KUL''TURNAJa ANTROPOLOGIJa
+E Cultural anthropology
+T KOLLEKTIV
+E Collective
+Team
+SINONIM. Fakul'tativnyj jelement. Sinonimy dajutsja tol'ko v sluchajah, kogda oni
+dostatochno rasprostraneny v jazyke dannoj discipliny ili byli shiroko rasprostraneny ranee. V
+poslednem sluchae oni privodjatsja kak "arhaizmy" (sm. p.1.1), hotja s jazykovedcheskoj tochki zrenija
+mogut takovymi ne javljat'sja. Pod "terminom obuchenija" (So) ponimaetsja termin, naibolee shiroko
+upotrebljajushhijsja v uchebnoj literature i praktike; inogda on ne sootvetstvuet aktual'noj
+jazykovoj praktike specialistov.
+T VNEShNIE JeKONOMIChESKIE JeFFEKTY T KAUZAL''NAJa LOGIKA
+S vneshnjaja jekonomija S logika prichinnosti
+vneshnie izderzhki prichinnaja logika
+dizjekonomija
+Osobym vidom sinonimov javljajutsja abbreviatury:
+T TRANSNACIONAL''NYE KORPORACII
+Sk TNK
+Sleduet imet' v vidu, chto rjad sinonimov javljajutsja ne polnymi, a lish' chastichnymi,
+uslovnymi ("kvazisinonimami"), t.e. imejut ottenki znachenija, otlichajushhie ih semantiku ot
+semantiki zaglavnogo termina (sm. p.1.2.1). V chastnosti, oni mogut byt' vidovymi terminami po
+otnosheniju k zaglavnomu (SREDSTVA PROIZVODSTVA - orudija truda, sredstva truda); odnako vkljuchenie takih terminov v slovar' v statuse sinonima predstavljalos' celesoobraznym s
+informacionnoj i didakticheskoj tochek zrenija (sm. p.1.2.1).
+Vse sinonimy figurirujut v slovare v kachestve otdel'nyh vhodov. Ot nih daetsja ssylka na
+sootvetstvujushhij termin, prinjatyj v kachestve zaglavnogo. Slovarnye stat'i sinonimov soderzhat
+tol'ko jetot jelement (ssylku na termin).
+OPREDELENIE. Objazatel'nyj jelement. Opredelenie vkljuchaet:
+1) definiciju (obychno odno nazyvnoe predlozhenie), kratko vyrazhajushhuju znachenie
+termina i ego osnovnye priznaki (atributy);
+2) opisanie, bolee podrobno raskryvajushhee znachenie termina.
+Opisanie stroitsja v svobodnoj forme i soderzhit vazhnye dopolnitel'nye svedenija (kak o
+termine, tak i o vyrazhaemom im ponjatii), kotorye bolee polno harakterizujut sootvetstvujushhee
+ponjatie i bolee tochno opredeljajut ego mesto v ponjatijnoj sisteme. V to zhe vremja ob"em opisanija
+ne vsegda prevyshaet ob"em definicii:
+T NEGATIVNAJa DIALEKTIKA
+D Neomarksistskaja programma kriticheskogo pereosmyslenija dialektiki,
+osushhestvljaemogo na putjah social'no-filosofskoj redukcii kategorij dialektiki Gegelja k
+tem ili inym aspektam obshhestvenno-jekonomicheskoj real'nosti.
+Do Negativnaja dialektika predpolagaet deontologizaciju dialektiki, gipertrofiju
+razrushitel'noj, otricatel'noj roli dialektiki (absoljutizaciju principa negativnosti),
+otricanie trebovanija sistematichnosti v dialekticheskom myshlenii.
+VYShE. Fakul'tativnyj jelement (otsutstvuet redko - tol'ko u naibolee obshhih ponjatij).
+Chashhe vsego jeto paradigmaticheskoe otnoshenie sootnosit dannyj termin s bolee obshhim (rodovym,
+vyshestojashhim) ponjatiem (terminom), prichem takih ponjatij mozhet byt' neskol'ko. Ponjatie,
+vyrazhaemoe terminom s pometoj VYShE (jelementom stat'i VYShE), mozhet byt' po otnosheniju k
+zaglavnomu terminu:
+1) sovokupnost'ju ili kategoriej (otnoshenie "obshhee - chastnoe"), k kotoroj prinadlezhit
+zaglavnyj termin (tip "vyshe/kategorija" (Vk)):
+T SUBKUL''TURA T NEGATIVNAJa DIALEKTIKA
+Vk KUL''TURA Vk DIALEKTIKA
+2) sostavnoj chast'ju v shirokom smysle: variantom teorii, napravleniem vnutri odnoj
+nauchnoj shkoly, konkretnym metodom vnutri opredelennoj metodologii, teoriej ili metodom,
+harakternymi dlja opredelennoj shkoly (poslednjaja vystupaet kak jelement VYShE):
+T NEGATIVNAJa DIALEKTIKA
+Vk NEOMARKSIZM
+T ROLEJ TEORIJa
+Vk SOCIAL''NAJa PSIHOLOGIJa
+Specificheskimi raznovidnostjami otnoshenija VYShE javljajutsja otnoshenija "vyshe/strana"
+(Vs) i "vyshe/vremja" (Vv). Oni sootnosjat s opredelennoj stranoj i jepohoj harakternye dlja nih
+ponjatija (javlenija, nauchnye shkoly i t.d.):
+T BIHEVIORIZM T LIBERAL''NAJa TEOLOGIJa
+Vs SShA Vv 19 v.
+PREDShESTVENNIKI. Fakul'tativnyj jelement. Kak v terminologicheskih, tak i v
+imennyh SS v nem MOGUT ukazyvat'sja ne tol'ko imena uchenyh, obshhestvennyh i politicheskih
+dejatelej, no i uchenija, teorii, shkoly, metody (imena inostrannyh uchenyh privodjatsja vmeste s ih
+original'nym napisaniem):
+T POLITIChESKIJ PLJuRALIZM
+P INSTITUCIONAL''NAJa ShKOLA
+RENAR Zh. (Renard J.)
+Jetot jelement otsutstvuet v stat'jah, posvjashhennyh naibolee obshhim ponjatijam gumanitarnyh
+nauk POZNANIE, PRIChINNOST'', METODOLOGIJa NAUKI i t.p.

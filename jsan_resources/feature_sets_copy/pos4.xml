@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<feature-set name="POS Tagggers">
+	<description value="A (partial) set of features used by Zheng et al. Feature classes with many features (e.g. character bigrams etc.) are limited to top 50."/>
+	<feature name="POS Tags" calc_hist="true">
+		<description value="Part-Of-Speech tags extracted by the Stanford POS Maxent Tagger."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.MaxentPOSTagsEventDriver">
+		</event-driver>
+		<canonicizers>
+		</canonicizers>
+		<cullers>
+			<culler class="edu.drexel.psal.jstylo.eventCullers.MostCommonEventsExtended">
+				<param name="N" value="50"/>
+			</culler>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="POS Bigrams" calc_hist="true">
+		<description value="Part-Of-Speech tag bigrams extracted by the Stanford POS Maxent Tagger."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.MaxentPOSNGramsEventDriver">
+			<param name="N" value="2"/>
+		</event-driver>
+		<canonicizers>
+		</canonicizers>
+		<cullers>
+			<culler class="edu.drexel.psal.jstylo.eventCullers.MostCommonEventsExtended">
+				<param name="N" value="50"/>
+			</culler>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="POS Trigrams" calc_hist="true">
+		<description value="Part-Of-Speech tag trigrams extracted by the Stanford POS Maxent Tagger."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.MaxentPOSNGramsEventDriver">
+			<param name="N" value="3"/>
+		</event-driver>
+		<canonicizers>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+</feature-set>

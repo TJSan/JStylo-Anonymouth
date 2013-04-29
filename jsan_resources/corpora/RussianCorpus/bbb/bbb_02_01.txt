@@ -1,0 +1,22 @@
+﻿Sintezator v zadache dostupa ispol'zuetsja dlja vydachi otvetov na EJa i dlja proverki polnoty i korrektnosti modelej; vosstanovlenija jellipsisov, razreshenija anafor i t.d. Sintez EJa-predlozhenij realizuetsja po bazovoj sheme pochti temi zhe blokami LT, chto i dlja analiza. V kachestve primera dany dva zaprosa i sintezirovannye perefrazirovki, dlja kotoryh analiz po kljuchevym slovam ne primenim: leksicheskij sostav odin i tot zhe, a smysl (pri raznom porjadke slov) - raznyj.
+     Kakie jetapy proshli vse TJeZy?        Kakie TJeZy proshli vse jetapy?
+Sootvetstvujushhie sintezirovannye perefrazirovki:
+     Kakie jetapy proshli vse TJeZy?        Proshli kakie TJeZy vse jetapy?
+     Vse TJeZy kakie proshli jetapy?        Kakie TJeZy vse jetapy proshli?
+     Proshli kakie jetapy vse TJeZy?        Vse jetapy kakie TJeZy proshli?
+Privedem eshhe primer sinteza perefrazirovok s promezhutochnogo i vyhodnogo urovnej.
+     Zapros: Kogda KD vyvedeny dlja paneli H?
+Sintez perefrazirovok:
+     Posle grammaticheskogo analiza:      Posle semanticheskogo analiza:
+     Kogda KD vyvedeny dlja paneli H?      Kogda proshla jetap VKD panel' H?
+     KD kogda vyvedeny dlja paneli H?       Proshla kogda jetap VKD panel' H?
+     Dlja paneli H kogda KD vyvedeny?      Jetap VKD panel' H kogda proshla?
+3.2. Sistema analiza EJa-tekstov po poiskovym obrazam pol'zovatelja ("SATPO")
+Obolochka sistemy analiza tekstovyh  dokumentov dlja poiska i  vydelenija  fragmentov  EJa-teksta, sootvetstvujushhih opisanijam situacij, zadavaemyh pol'zovatelem v vide mnozhestva obobshhennyh poiskovyh obrazov [Aredova i dr., 1997]. Obolochka rasschitana na poabzacnyj analiz real'nyh EJa-tekstov. Nabor poiskovyh obrazov (PO) predstavljaetsja v vide zaranee sostavlennyh semanticheskih kontekstov. Dlja konkretnogo pol'zovatelja nabor PO v takih zadachah sravnitel'no postojanen, peremennym javljaetsja potok raznoobraznyh materialov. Podobnoe vstrechaetsja v zadachah poiska informacii po tekstovym fajlam gazet, zhurnalov i t.p.; sostavlenija obzorov i analiticheskih otchetov; "otslezhivanija" napered zadannoj informacii i t.p.
+Dlja tekstovyh fajlov kazhdyj abzac teksta bystro prosmatrivaetsja (jekspress-analiz po kljuchevym slovam),  posledovatel'no vydeljajutsja “podozritel'nye” fragmenty, kotorye podajutsja na LT dlja polnogo analiza. LT analiziruet jeti fragmenty i vydeljaet tol'ko te otrezki EJa-teksta, v kotoryh prisutstvujut poiskovye obrazy. V obshhem sluchae pri udachnom vydelenii poiskovogo obraza ego obobshhennye i parametricheskie jelementy konkretizirujutsja informaciej iz sootvetstvujushhego fragmenta EJa-teksta
+V kachestve rezul'tata  vydaetsja mnozhestvo otrezkov EJa-teksta, kazhdomu iz kotoryh sopostavleno mnozhestvo PO i drugaja informacija. V [Aredova i dr., 1997] privedeny primery PO i vydelennyh fragmentov EJa-teksta v jeksperimental'noj predmetnoj oblasti.
+3.3. Mashinnyj perevodchik ("TOLMACh""")
+Obolochka sistemy mashinnogo perevoda, prednaznachennaja dlja perevoda tekstov s odnogo EJa na drugoj  [Aredova i dr., 1996]. Po strukture i funkcional'nym vozmozhnostjam sposobna rabotat' po dvum "kol'cam" perevoda: pervoe ispol'zuet tol'ko modeli grammatik vhodnogo i vyhodnogo jazykov; vtoroe — jeti dve modeli pljus edinuju dlja jetih dvuh jazykov model' problemnoj sredy (t.e. edinuju semantiku). 
+Dlja demonstracii vozmozhnostej obolochki byla razrabotana LM dlja vhodnogo russkogo i vyhodnogo anglijskogo jazykov v predmetnoj oblasti "SPORT" (teksty otnosjatsja k referatam statej po sportivnoj tematike). Jeta predmetnaja oblast' soderzhit dostatochno proizvol'nye teksty s obshheupotrebitel'noj leksikoj, s shirokim spektrom terminov po medicine, tehnike, psihologii, sportu i dr. Primer perevoda fragmenta EJa-teksta referata: 
+                               Original:
+V rjade stran mini-basketbol rassmatrivaetsja kak nacional'noe sportivnoe dvizhenie detej, kotoromu pridaetsja gosudarstvennoe znachenie. Rassmatrivajutsja prichiny kriticheskogo sokrashhenija chisla komand, sportsmenov, sorevnovanij po basketbolu v SSSR. Dlja obespechenija pritoka sportivnyh rezervov neobhodimo privlechenie v mini-basketbol ne menee 2 mln. detej. Celesoobrazny chetyre vozrastnye kategorii sorevnujushhihsja - do 6 let, 7-8 let, 9-10 let i 11-12 let. Predlozheny prakticheskie mery razvitija mini-basketbola v SSSR.

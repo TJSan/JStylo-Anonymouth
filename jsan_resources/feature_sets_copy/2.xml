@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<feature-set name="Best two features">
+	<description value="A (partial) set of top 12 features used by NLS-Team."/>
+	<feature name="Top Letter trigrams" calc_hist="true">
+		<description value="Most common letter trigrams (e.g. aaa, aab etc.), case insensitive. Trigrams are taken only within words (do not cross adjacent words)."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.LetterNGramEventDriver">
+			<param name="N" value="3"/>
+		</event-driver>
+		<canonicizers>
+			<canonicizer class="com.jgaap.canonicizers.UnifyCase">
+			</canonicizer>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+	<feature name="POS Bigrams" calc_hist="true">
+		<description value="Part-Of-Speech tag bigrams extracted by the Stanford POS Maxent Tagger."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.MaxentPOSNGramsEventDriver">
+			<param name="N" value="2"/>
+		</event-driver>
+		<canonicizers>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+</feature-set>

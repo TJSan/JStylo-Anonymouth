@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<feature-set name="POS Trigrams">
+	<description value="Testing of features in different combinations"/>
+	<feature name="POS Trigrams" calc_hist="true">
+		<description value="Part-Of-Speech tag trigrams extracted by the Stanford POS Maxent Tagger."/>
+		<event-driver class="edu.drexel.psal.jstylo.eventDrivers.MaxentPOSNGramsEventDriver">
+			<param name="N" value="3"/>
+		</event-driver>
+		<canonicizers>
+		</canonicizers>
+		<cullers>
+		</cullers>
+		<norm value="NONE"/>
+		<factor value="1.0"/>
+	</feature>
+</feature-set>

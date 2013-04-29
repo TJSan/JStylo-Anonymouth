@@ -1,0 +1,53 @@
+﻿Privodjatsja predlozhenija po razrabotke terminologicheskogo (konceptual'nogo) slovarja
+tezaurusnogo tipa na materiale informacionnyh tezaurusov po obshhestvennym naukam, kotorye
+sozdany i razrabatyvajutsja v Institute nauchnoj informacii po obshhestvennym naukam (INION
+RAN): jeto tezaurusy po jekonomike, filosofii, sociologii, pravu, jazykoznaniju i dr. Takoj
+slovar' predstavljaet soboj kratkuju jenciklopediju, v kotoroj kazhdomu terminu dana odna ili
+neskol'ko definicij, a mezhdu terminami ustanovleny paradigmaticheskie otnoshenija
+tezaurusnogo tipa: sinonimija, rod-vid (vyshe-nizhe, s razlichnymi modifikacijami), associacija.
+Krome togo, privedena informacija didakticheskogo haraktera: dany primery upotreblenija
+termina-koncepta (konteksty); ukazany uchenye, razrabatyvavshie sootvetstvujushhuju problemu, ih
+predshestvenniki i posledovateli, naibolee avtoritetnye raboty po dannoj probleme.
+Blagodarja takomu slovarju rech' mozhet idti o sistematizacii ves'ma slozhnyh i
+rasplyvchatyh terminologicheskih i ponjatijnyh sistem gumanitarnyh nauk, o vyjavlenii
+prioritetnyh i perspektivnyh napravlenij issledovanij po ob"ektivnym kriterijam; a takzhe o
+modelirovanii glubinnoj struktury nauchnyh idej i ustanovlenii svjazej mezhdu jetoj strukturoj i
+estestvennym jazykom.
+Kognitivnye psihologi otnosjat k konceptam znanija ob ob"ektah. Koncepty vypolnjajut
+funkciju kategorizacii, jeto bazovaja kognitivnaja sushhnost', pozvoljajushhaja svjazat' smysl so slovom.
+Kategorizacija sovershaetsja dvumja operacijami: odna sostoit v tom, chtoby razmezhevat' i
+razgranichit' klassy, drugaja – opredelit' svjazi mezhdu jetim klassom i drugimi klassami.
+Razmezhevanie i opredelenie granic mezhdu klassami mozhet proishodit' v sootvetstvii s
+razlichnymi tochkami zrenija, razlichnymi koncepcijami po voprosu o soderzhanii konceptov.
+Predstaviteli «klassicheskoj» tochki zrenija (v kognitivnoj psihologii) schitajut, chto
+sushhestvuet prioritetnaja svjaz', s pomoshh'ju kotoroj odni koncepty harakterizujutsja po otnosheniju
+k drugim: jeto vhozhdenie klassov drug v druga.
+Takim obrazom, koncepty zadajut ierarhiju. Nahodjas' na ee vershine, koncepty obladajut
+neznachitel'nym chislom svojstv, jeto rodovye koncepty. Koncepty zhe, nahodjashhiesja v osnovanii
+ierarhii, imejut naibol'shee chislo svojstv: oni naibolee specifichnye. Takaja organizacija znanija
+mozhet byt' vyrazhena semanticheskoj set'ju, sostojashhej iz uzlov i dug. Uzly – jeto koncepty, dugi –
+svjazi mezhdu konceptami. V issledovanijah predstavleny razlichnye vidy svjazej; k naibolee
+detal'nym razrabotkam konceptual'nyh (paradigmaticheskih) svjazej mozhno otnesti sistemu svjazej
+v «Tezauruse po teoreticheskoj i prikladnoj lingvistike» S.E. Nikitinoj [1].
+Jetot podhod predlagalsja eju takzhe dlja tezaurusnogo opisanija terminov stihovedenija [2].
+Zadachu takogo tezaurusa avtor vidit v raskrytii sistemy i struktury dannoj predmetnoj oblasti.
+Jeto delaetsja putem postroenija ponjatijnoj seti terminov, gde kazhdyj termin svjazan so
+mnozhestvom drugih. No vnachale v tezauruse dolzhno byt' privedeno tolkovanie termina, cel'
+kotorogo – otgranichit' odin termin ot drugogo.
+Obe jeti zadachi vlijajut drug na druga, v osobennosti, ustanovlenie semanticheskih
+otnoshenij termina vlijajut na peresmotr i utochnenie tolkovanija.
+V raznyh tezaurusah odni i te zhe terminy mogut byt' predstavleny po-raznomu.
+Sravnim, kak predstavlen termin STOPA v stat'e S.E.Nikitinoj i N.V.Vasil'evoj (s
+nekotorymi sokrashhenijami) [2] i v «Terminologicheskom slovare-tezauruse po literaturovedeniju»
+N.Ju. Rusovoj [3]:
+Nizhe privodjatsja predlozhenija po razrabotke terminologicheskogo (konceptual'nogo)
+slovarja tezaurusnogo tipa na materiale informacionnyh tezaurusov po obshhestvennym naukam,
+kotorye sozdany i razrabatyvajutsja v Institute nauchnoj informacii po obshhestvennym naukam
+(INION RAN): jeto tezaurusy po jekonomike, filosofii, sociologii, pravu, jazykoznaniju i dr. [5]
+Takoj konceptual'nyj slovar' predstavljaet soboj kratkuju jenciklopediju, v kotoroj kazhdomu
+terminu dana odna ili neskol'ko definicij, a mezhdu terminami ustanovleny paradigmaticheskie
+otnoshenija tezaurusnogo tipa: sinonimija, rod-vid (vyshe-nizhe, s razlichnymi modifikacijami),
+razlichnye associativnye otnoshenija. Krome togo, privedena informacija didakticheskogo
+haraktera: dany primery upotreblenija termina-koncepta (konteksty); ukazany uchenye,
+razrabatyvavshie sootvetstvujushhuju problemu, ih predshestvenniki i posledovateli, naibolee
+avtoritetnye raboty po dannoj probleme.

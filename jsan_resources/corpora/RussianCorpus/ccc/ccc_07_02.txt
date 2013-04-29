@@ -1,0 +1,77 @@
+﻿V.G. Gak, podnimavshij jetu problemu v ramkah tradicionnoj
+nauchnoj leksikografii, vyskazyval mysl' o perspektivnosti
+ob"edinenija lingvisticheskogo slovarja i obshhej jenciklopedii, a
+takzhe o vkljuchenii v perevodnyj slovar' lingvostranovedcheskih
+svedenij [4 i dr.].
+Privlechenie jenciklopedicheskih svedenij praktikuetsja i v
+konkretnyh slovarnyh opisanijah, otrazhajushhih rezul'taty
+leksiko-semanticheskih issledovanij. Tak, v materialah k
+Integral'nomu slovarju sovremennogo russkogo literaturnogo
+jazyka [5] rjad statej sushhestvitel'nyh snabzhen informaciej
+kul'turologicheskogo haraktera, kasajushhejsja obydennoj
+dejatel'nosti cheloveka, obydennyh astronomicheskih predstavlenij
+i t.p.; takaja informacija privoditsja v jenciklopedicheskoj zone.
+Nekotorye znanija o fragmentah dejstvitel'nosti imejutsja i
+v Novom ob"jasnitel'nom slovare sinonimov russkogo jazyka [6 i
+dr.]: ukazanie bytijnyh njuansov (v terminah NOSS –
+semanticheskih razlichitel'nyh priznakov) neobhodimo dlja
+ob"jasnenija razlichij v sferah upotreblenija sinonimichnyh
+edinic. Svedenija o sushhestvennyh dlja razlichenija sinonimov
+svojstvah realij razmeshhajutsja v zone znachenija sinonimicheskogo
+rjada: «Zdanijami mogut byt' nazvany tol'ko dostatochno bol'shie
+sooruzhenija, postroennye po opredelennomu
+a r h i t e k t u r n o m u zamyslu» ([6, S. 82], stat'ja
+sinonomicheskogo rjada «DOM 1, ZDANIE i dr».; «… sned' mozhet i podavat'sja na stol, i lezhat' v sumke ili v holodil'nike» [tam zhe,
+S. 96], stat'ja sin. rjada «EDA 1, uhodjashh. SNED'' i dr.»; «Ornament
+tesno svjazan s nacional'noj k u l ' t u r o j, s toj ili inoj
+jepohoj» [tam zhe, S. 446], stat'ja rjada «UZOR 1.1, (spec.
+ORNAMENT)». Po suti dela, svjazi, provodimye ot <snedi> k
+<holodil'niku> ili ot <ornamenta> k <kul'ture> - jeto svjazi
+jenciklopedicheskogo plana, ne otrazhaemye v tolkovanijah i ne
+imejushhie takzhe ustojchivyh sochetaemostnyh manifestacij (v jetom
+plane svjaz' ot <zdanija> k <arhitekture> predstavljaetsja bolee
+«lingvistichnoj»: naprimer, vozmozhno upotreblenie atributivnoj
+konstrukcii zdanie starinnoj/sovremennoj arhitektury).
+(Otmetim, chto harakter svjazi mezhdu sushhnostjami /lingvisticheskaja
+vs jenciklopedicheskaja/ mozhet zaviset' ot napravlenija «strelki».
+Ljubopytnyj primer s edinicami <medved'> i <berloga> priveden
+v [7]: dlja imeni medved' <berloga> – sushhnost' jenciklopedicheskogo porjadka, a dlja imeni berloga ‘medved'’ – semanticheskij
+komponent; blizkaja situacija nabljudaetsja i pri sootnesenii
+sushhnostej <sned'> i <holodil'nik>). 
+V prikladnoj oblasti mozhno nazvat' rabotu [8], otchasti
+predvarjajushhuju strukturu RUSLANa; v nej apparat
+jenciklopedicheskih funkcij predlagalos' primenit' pri opisanii
+terminov uzkoj predmetnoj oblasti («Jelektroizmeritel'nye
+pribory»); v rabote pokazano, kak s pomoshh'ju jenciklopedicheskih
+funkcij mozhno otrazit' razlichnye svojstva realij: princip
+dejstvija pribora, sposob vkljuchenija i dr.
+V [9] opisyvaetsja proekt ob"edinennogo resursa,
+vkljuchajushhego slovar' tezaurusnogo tipa i ontologiju (formal'nuju
+model' predmetnoj oblasti), kotorye byli by sposobny
+funkcionirovat' kak edinoe celoe vo mnogih prilozhenijah,
+svjazannyh s obrabotkoj EJa. V [10] rassmatrivaetsja zadacha avtomaticheskogo popolnenija
+ontologii svedenijami iz tradicionnogo jenciklopedicheskogo
+izdanija - «Rossijskogo jenciklopedicheskogo slovarja» (M., 2001),
+predstavlennogo v jelektronnoj srede. Rezul'tatom dolzhna stat'
+ontologija, opirajushhajasja na mnogoprofil'noe professsional'noe
+jenciklopedicheskoe opisanie; razrabotannaja avtorami tehnologija
+primenima takzhe k konvertirovaniju v formu ontologij
+tradicionnyh semanticheskih leksikograficheskih proizvedenij.
+Sootnoshenie obshheleksicheskih opisanij i opisanij
+predmetnyh oblastej postojanno nahoditsja v zone vnimanija
+specialistov po prikladnoj lingvistike. Naprimer,
+sopostavleniju ideograficheskoj struktury lingvisticheskogo
+tezaurusnogo resursa RussNet i logiko-ponjatijnoj shemy
+predmetnoj oblasti («Kadrovye naznachenija») posvjashhena rabota
+[11], gde s oporoj na jetot obshheleksicheskij tezaurus i na
+<predikatnuju> model' predmetnoj oblasti reshaetsja odna iz zadach
+napravlenija Information extraction.
+ V nastojashhem issledovanii my poprobuem vyjasnit', kakie
+vidy jenciklopedicheskoj informacii «navevaet» sploshnoj
+prosmotr obshhej leksiki; dlja prosmotra vzjat slovnik «Kratkogo
+russko-francuzskogo uchebnogo slovarja» A.A.Zaliznjaka (okolo 10000
+slov; M., 1961); slovnik jetogo slovarja, nebol'shoj po ob"emu,
+neodnokratno primenjalsja i zarekomendoval sebja v kachestve
+istochnika obydennoj leksiki v semanticheskih issledovanijah
+(naprimer, pri razrabotke BD «Leksikograf» [7] on iznachal'no
+ispol'zovalsja kak opornyj massiv).
